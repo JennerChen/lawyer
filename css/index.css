@@ -1,0 +1,273 @@
+html,
+body {
+	height: 100%;
+	min-width: 600px;
+}
+.slider {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+#header {
+	background-image: url(../img/header/header_01.jpg);
+	text-align: center;	
+}
+
+#header .content {
+	margin: 0 auto;
+	position: relative;
+	top: 30%;
+	width: 65%;
+}
+
+#header .content .title {
+	width: 404px;
+	height: 118px;
+}
+
+#header .content .slogan {
+	color: white;
+	font-size: 30px;
+	font-weight: 800;
+	margin-top: 30px;
+}
+
+#header .content .introduce {
+	margin-top: 40px;
+	height: 100px;
+	display: inline-block;
+}
+
+#header .content .introduce .introduceBtn {
+	padding-top: 15px;
+	margin-left: 30px;
+	float: left;
+	width: 100px;
+	height: 100%;
+	filter: alpha(opacity:50);
+	background-color: rgba(96, 97, 110, 0.5);
+	transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+}
+
+#header .content .introduce .introduceBtn:hover {
+	cursor: pointer;
+	background-color: rgba(0, 160, 234, 1);
+	filter: alpha(opacity:100);/*for ie*/
+}
+
+#header .content .introduce .introduceBtn>p {
+	letter-spacing: 2px;
+	color: white;
+	padding-top: 5px;
+	font-weight: 800;
+}
+
+/*background opactiy hack for ie6,7,8*/
+@media \0screen\, screen\9 {
+
+	/* 只支持IE6、7、8 */
+	.introduceBtn {
+		background-color: #60616e;
+		filter: Alpha(opacity=50);
+		position: static; /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+		*zoom: 1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+	}
+
+	.introduceBtn>p,
+	.introduceBtn>img {
+		position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
+	}
+
+}
+
+#whoAmI{
+	background-image: url(../img/whoAmI/bg.jpg);
+	text-align: center;	
+}
+
+#whoAmI .content {
+	margin: 0 auto;
+	position: relative;
+	top: 25%;
+	width: 65%;
+}
+#whoAmI .content h2{
+	color: white;
+	font-weight: 800;
+	margin-bottom: 25px;
+}
+#whoAmI .content p{
+	margin-top: 25px;
+	color: white;
+	font-weight: 800;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+#whoAmI .content .introduce{
+	margin-top: 200px;
+	height: 100px;
+	display: inline-block;
+}
+#whoAmI .content .introduce .introduceSection{
+	float: left;
+	padding-left: 120px;
+}
+#whoAmI .content .introduce .introduceSection:first-child{
+	padding-left: 0px !important;
+}
+#whoAmI .content .introduce .introduceSection>p{
+	color: black;
+}
+#whoAmI .content .introduce .introduceSection>h3{
+	color: black;
+	font-size: 28px;
+	font-weight: 900;
+}
+
+#whatTodo{
+	background-image: url(../img/whatTodo/bg.jpg);
+	width: 100%;
+	text-align: center;	
+}
+#whatTodo .content {
+	margin: 0 auto;
+	position: relative;
+	top: 25%;
+	width: 65%;
+}
+
+#whatTodo .content h2{
+	color: white;
+	font-weight: 800;
+	margin-bottom: 25px;
+}
+#whatTodo .content p{
+	margin-top: 25px;
+	color: white;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+#whatTodo .content .introduce{
+	margin-top: 200px;
+	height: 100px;
+	display: inline-block;
+}
+#whatTodo .content .introduce .introduceSection{
+	float: left;
+	padding-left: 120px;
+}
+#whatTodo .content .introduce .introduceSection:first-child{
+	padding-left: 0px !important;
+}
+#whatTodo .content .introduce .introduceSection>p{
+	color: black;
+}
+
+#howTodo{
+	background-image: url(../img/howTodo/bg.jpg);
+	width: 100%;
+	text-align: center;	
+}
+
+#howTodo .content {
+	margin: 0 auto;
+	position: relative;
+	top: 25%;
+	width: 65%;
+}
+
+#howTodo .content h2{
+	color: white;
+	font-weight: 800;
+	margin-bottom: 25px;
+}
+#howTodo .content p{
+	margin-top: 25px;
+	color: white;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+
+#howTodo .content .introduce{
+	margin-top: 200px;
+	height: 100px;
+}
+
+#contact{
+	background-image: url(../img/contact/bg2.jpg);
+	width: 100%;
+	text-align: center;	
+}
+#contact .content {
+	margin: 0 auto;
+	position: relative;
+	top: 25%;
+	width: 65%;
+}
+#contact .content h2{
+	color: white;
+	font-weight: 800;
+	margin-bottom: 25px;
+}
+#contact .content p{
+	margin-top: 25px;
+	color: white;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+
+#contact .content .introduce{
+	margin-top: 100px;
+	height: 150px;
+	display: inline-block;
+}
+
+#contact .content .introduce .introduceBtn {
+	padding-top: 20px;
+	margin-left: 50px;
+	float: left;
+	width: 250px;
+	height: 100%;
+	filter: alpha(opacity:50);
+	background-color: rgba(96, 97, 110, 0.5);
+	transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+}
+
+#contact .content .introduce .introduceBtn>p {
+	margin-top: 10px;
+	letter-spacing: 2px;
+	color: white;
+	font-size: 16px;
+}
+
+/*silder*/
+.sider {
+	position: fixed;
+	right: 10px;
+	top: 40%;
+	z-index: 99;
+	width: 54px;
+	text-align: center;
+}
+
+.sider img {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.sider img:hover {
+	opacity: 1;
+}
+.next{
+	bottom: 50px;
+	position: fixed;
+	left: 48%;
+}
