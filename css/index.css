@@ -19,7 +19,7 @@ body {
 	margin: 0 auto;
 	position: relative;
 	top: 30%;
-	width: 65%;
+	width: 60%;
 }
 
 #header .content .title {
@@ -93,8 +93,8 @@ body {
 #whoAmI .content {
 	margin: 0 auto;
 	position: relative;
-	top: 25%;
-	width: 65%;
+	top: 18%;
+	width: 60%;
 }
 #whoAmI .content h2{
 	color: white;
@@ -137,8 +137,8 @@ body {
 #whatTodo .content {
 	margin: 0 auto;
 	position: relative;
-	top: 25%;
-	width: 65%;
+	top: 18%;
+	width: 60%;
 }
 
 #whatTodo .content h2{
@@ -151,6 +151,7 @@ body {
 	color: white;
 	letter-spacing: 2px;
 	font-size: 20px;
+	font-weight: 800;
 }
 #whatTodo .content .introduce{
 	margin-top: 200px;
@@ -177,8 +178,8 @@ body {
 #howTodo .content {
 	margin: 0 auto;
 	position: relative;
-	top: 25%;
-	width: 65%;
+	top: 18%;
+	width: 60%;
 }
 
 #howTodo .content h2{
@@ -191,6 +192,7 @@ body {
 	color: white;
 	letter-spacing: 2px;
 	font-size: 20px;
+	font-weight: 800;
 }
 
 #howTodo .content .introduce{
@@ -206,13 +208,16 @@ body {
 #contact .content {
 	margin: 0 auto;
 	position: relative;
-	top: 25%;
-	width: 65%;
+	top: 18%;
+	width: 60%;
 }
 #contact .content h2{
 	color: white;
 	font-weight: 800;
 	margin-bottom: 25px;
+}
+#contact .content>p{
+	font-weight: 800;
 }
 #contact .content p{
 	margin-top: 25px;
@@ -254,7 +259,7 @@ body {
 	right: 10px;
 	top: 40%;
 	z-index: 99;
-	width: 54px;
+	width: 27px;
 	text-align: center;
 }
 
@@ -270,4 +275,9 @@ body {
 	bottom: 50px;
 	position: fixed;
 	left: 48%;
+	width: 50px;
+	height: 30px;
+}
+.next>img{
+	cursor: pointer;
 }
