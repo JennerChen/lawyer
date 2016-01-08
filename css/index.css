@@ -1,7 +1,7 @@
 html,
 body {
 	height: 100%;
-	min-width: 600px;
+	/*min-width: 600px;*/
 }
 .slider {
   background-size: cover;
@@ -11,7 +11,7 @@ body {
   width: 100%;
 }
 #header {
-	background-image: url(../img/header/header_01.jpg);
+	background-image: url(../img/header/header.jpg);
 	text-align: center;	
 }
 
@@ -201,7 +201,7 @@ body {
 }
 
 #contact{
-	background-image: url(../img/contact/bg2.jpg);
+	background-image: url(../img/contact/bg.jpg);
 	width: 100%;
 	text-align: center;	
 }

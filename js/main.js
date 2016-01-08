@@ -36,8 +36,8 @@ $(function() {
 	$.scrollify({
 		section: ".slider",
 		easing: "easeOutExpo",
+		// easing: "easeOutQuad",
 		scrollSpeed: 800,
-		     // offset : 50,
 		scrollbars: false,
 		before: function(i, selections) {
 			$('.next').hide();
@@ -48,7 +48,10 @@ $(function() {
 		},
 	});
 
-
+	$('.introduceBtn',$('#header')).click(function(event) {
+		var target = $(this).data('go');
+		$('.sider').find("[data-go="+target+"]").trigger('click');
+	});
 	$(".sider").delegate('img', 'click', function(event) {
 		event.preventDefault();
 		$.scrollify.move($(this).data('go'));
@@ -82,4 +85,7 @@ $(function() {
 			}
 		}
 	},2000)
+	$(window).scroll(function(event) {
+		console.log('---');
+	});
 });
