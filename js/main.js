@@ -121,6 +121,16 @@ $(function() {
 				$(val).width(contactWidth);
 			});
 			$('#contact').find('.introduceBtn:gt(0)').css('margin-left',2*contactpadding + "px");
+
+			// --if it is IE8, need do some extra width/height change because ie8 not support @media query--------------------------
+			if(window.ISIE8){
+				if($('body').width()<1376){
+					console.log($('#whatTodo').find('.down').find('img').length)
+					$('#whatTodo').find('.down').find('img').width(80).height(80);
+				}else{
+					$('#whatTodo').find('.down').find('img').width(100).height(100);
+				}
+			}
 		}else{
 			// reset width/height when change width from pc width;
 			if(currentView && currentView ==='pc'){
@@ -128,6 +138,7 @@ $(function() {
 				$('#whatTodo').find('.introduceSection:gt(0)').removeAttr('style');
 				$('#contact').find('.introduceBtn').removeAttr('style');
 			}
+			currentView = "mobile";
 			var contentWidth = $('#header').find('.content').width(),
 				headerBtnWidth = $('#header').find('.introduceBtn').width();
 
@@ -162,9 +173,9 @@ $(function() {
 			var firstWhoAmIpadding = Math.floor((contentWidth - firstWhatTodoWidth)/4-2) +"px",
 				secondWhoAmIpadding = Math.floor((contentWidth - secondWhatTodoWidth)/4-2) +"px";
 			$('#whatTodo').find('.introduceSection:lt(2)').css('margin-left',firstWhoAmIpadding).css('margin-right',firstWhoAmIpadding);
-			$('#whatTodo').find('.introduceSection:gt(1)').css('margin-left',secondWhoAmIpadding).css('margin-right',secondWhoAmIpadding);
+			$('#whatTodo').find('.introduceSection:gt(1)').css('margin-left',secondWhoAmIpadding).css('margin-right',secondWhoAmIpadding);	
 
-			currentView = "mobile";
+
 		}
 	});
 	$(window).trigger('resize');

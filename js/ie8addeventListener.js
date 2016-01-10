@@ -58,3 +58,4 @@ for(i=0;i<html5tags.length;i++)
 tags.push(document.createElement(html5tags[i]).constructor.prototype);
 for(i=0;o=tags[i];i++)
 for(n in properties)Object.defineProperty(o,n,properties[n]);
+window.ISIE8 = true;
