@@ -6,9 +6,10 @@
 function sliderGo(index) {
 	var el = parseInt(index) >= 0 ? $('.sider').find('img:eq(' + index + ')') : index;
 	if (el.data('go') == '#home') {
+		el.attr('src','./img/global/home.png')
 		el.siblings('img').attr('src', './img/global/page_inactive.png');
 	} else {
-		el.attr('src', './img/global/page_active.png').siblings('img:gt(0)').attr('src', './img/global/page_inactive.png');
+		el.attr('src', './img/global/page_active.png').siblings('img:gt(0)').attr('src', './img/global/page_inactive.png').siblings('img:first').attr('src','./img/global/home_inactive.png');
 	}
 	if(el.data('go')=='#info'){
 		$('.next').find('img').attr('src','./img/global/previous.png')
@@ -17,7 +18,8 @@ function sliderGo(index) {
 	}
 
 }
-var enableArrowMoving = true;
+var enableArrowMoving = true,
+	currentView = null;
 $(function() {
 	$.fn.coolAnimate = function(animate, callback) {
 	    var self = this;
@@ -85,7 +87,85 @@ $(function() {
 			}
 		}
 	},2000)
-	$(window).scroll(function(event) {
-		console.log('---');
+	$(window).resize(function(event) {
+		if($('body').width()>=838){
+			// reset width/height when change width from mobile width;
+			if(currentView && currentView ==='mobile'){
+				$('#header').find('.introduceBtn').removeAttr('style');
+				$('#whoAmI').find('.introduceSection').removeAttr('style');
+				$('#whatTodo').find('.introduceSection').removeAttr('style');
+			}
+			currentView = "pc";
+			var contentWidth = $('#whoAmI').find('.content').width(),
+				whoAmIIntroduce = $('#whoAmI').find('.introduceSection'),
+				whoAmITotalWidth = 0,
+				whatTodoIntroduce = $('#whatTodo').find('.introduceSection'),
+				whatTodoTotalWidth = 0,
+				contactIntroduce = $('#contact').find('.introduceBtn');
+
+			$.each(whoAmIIntroduce, function(index, val) {
+				whoAmITotalWidth += $(val).width();
+			});
+			var whoAmIpadding = Math.floor((contentWidth - whoAmITotalWidth) /3)-5 +"px";
+			$('#whoAmI').find('.introduceSection:gt(0)').css('padding-left',whoAmIpadding);
+
+			$.each(whatTodoIntroduce, function(index, val) {
+				whatTodoTotalWidth += $(val).width();
+			});
+			var whatTodopadding = Math.floor((contentWidth - whatTodoTotalWidth) /3)-5 +"px";
+			$('#whatTodo').find('.introduceSection:gt(0)').css('padding-left',whatTodopadding);
+
+			var contactpadding =  15,
+				contactWidth = Math.floor((contentWidth - 4*contactpadding -10) / contactIntroduce.length);
+			$.each(contactIntroduce, function(index, val) {
+				$(val).width(contactWidth);
+			});
+			$('#contact').find('.introduceBtn:gt(0)').css('margin-left',2*contactpadding + "px");
+		}else{
+			// reset width/height when change width from pc width;
+			if(currentView && currentView ==='pc'){
+				$('#whoAmI').find('.introduceSection').removeAttr('style');
+				$('#whatTodo').find('.introduceSection:gt(0)').removeAttr('style');
+				$('#contact').find('.introduceBtn').removeAttr('style');
+			}
+			var contentWidth = $('#header').find('.content').width(),
+				headerBtnWidth = $('#header').find('.introduceBtn').width();
+
+			var headerMarginWidth = Math.floor((contentWidth - headerBtnWidth*2)/4-2) +"px";
+			$('#header').find('.introduceBtn').css('margin-left',headerMarginWidth).css('margin-right',headerMarginWidth);
+
+			// -------------------whoAmI--------------------------
+			var firstWhoAmIWidth = 0,
+				secondWhoAmiWidth = 0 ;
+			$.each($('#whoAmI').find('.introduceSection'), function(index, val) {
+				if(index<=1){
+					firstWhoAmIWidth += $(val).width();
+				}else{
+					secondWhoAmiWidth += $(val).width();
+				}
+			});
+			var firstWhoAmIpadding = Math.floor((contentWidth - firstWhoAmIWidth)/4-2) +"px",
+				secondWhoAmIpadding = Math.floor((contentWidth - secondWhoAmiWidth)/4-2) +"px";
+			$('#whoAmI').find('.introduceSection:lt(2)').css('margin-left',firstWhoAmIpadding).css('margin-right',firstWhoAmIpadding);
+			$('#whoAmI').find('.introduceSection:gt(1)').css('margin-left',secondWhoAmIpadding).css('margin-right',secondWhoAmIpadding);
+
+			// -------------------whatTodo--------------------------
+			var firstWhatTodoWidth = 0,
+				secondWhatTodoWidth = 0 ;
+			$.each($('#whatTodo').find('.introduceSection'), function(index, val) {
+				if(index<=1){
+					firstWhatTodoWidth += $(val).width();
+				}else{
+					secondWhatTodoWidth += $(val).width();
+				}
+			});
+			var firstWhoAmIpadding = Math.floor((contentWidth - firstWhatTodoWidth)/4-2) +"px",
+				secondWhoAmIpadding = Math.floor((contentWidth - secondWhatTodoWidth)/4-2) +"px";
+			$('#whatTodo').find('.introduceSection:lt(2)').css('margin-left',firstWhoAmIpadding).css('margin-right',firstWhoAmIpadding);
+			$('#whatTodo').find('.introduceSection:gt(1)').css('margin-left',secondWhoAmIpadding).css('margin-right',secondWhoAmIpadding);
+
+			currentView = "mobile";
+		}
 	});
+	$(window).trigger('resize');
 });

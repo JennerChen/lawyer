@@ -1,18 +1,19 @@
 html,
 body {
-	height: 100%;
-	/*min-width: 600px;*/
+    height: 100%;
 }
+
 .slider {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100%;
-  width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
 }
+
 #header {
 	background-image: url(../img/header/header.jpg);
-	text-align: center;	
 }
 
 #header .content {
@@ -21,7 +22,10 @@ body {
 	top: 30%;
 	width: 60%;
 }
-
+#header .content>img{
+	src:url("./img/header/header_logo.png");
+	/*height: ;*/
+}
 #header .content .title {
 	width: 404px;
 	height: 118px;
@@ -53,6 +57,9 @@ body {
 	-webkit-transition: background-color 0.5s;
 	-o-transition: background-color 0.5s;
 }
+#header .content .introduce .introduceBtn:first-child{
+	margin-left:0px;
+}
 
 #header .content .introduce .introduceBtn:hover {
 	cursor: pointer;
@@ -69,7 +76,6 @@ body {
 
 /*background opactiy hack for ie6,7,8*/
 @media \0screen\, screen\9 {
-
 	/* 只支持IE6、7、8 */
 	.introduceBtn {
 		background-color: #60616e;
@@ -82,21 +88,25 @@ body {
 	.introduceBtn>img {
 		position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
 	}
-
 }
 
 #whoAmI{
 	background-image: url(../img/whoAmI/bg.jpg);
-	text-align: center;	
 }
 
 #whoAmI .content {
 	margin: 0 auto;
 	position: relative;
-	top: 18%;
 	width: 60%;
+	height: 100%;
+}
+
+#whoAmI .content .upper,
+#whoAmI .content .down{
+	height: 50%;
 }
 #whoAmI .content h2{
+	padding-top: 13%;
 	color: white;
 	font-weight: 800;
 	margin-bottom: 25px;
@@ -109,16 +119,32 @@ body {
 	font-size: 20px;
 }
 #whoAmI .content .introduce{
-	margin-top: 200px;
+	margin-top: 20px;
 	height: 100px;
+	text-align: center;
 	display: inline-block;
+	width: 100%;
+}
+@media screen and (max-width: 1024px){
+	#whoAmI .content .introduce .introduceSection>p{
+		font-size: 16px;
+	}
+	#whoAmI .content .introduce .introduceSection>h3{
+		font-size: 24px;
+	}
 }
 #whoAmI .content .introduce .introduceSection{
 	float: left;
-	padding-left: 120px;
+}
+#whoAmI .content .introduce .introduceSection img{
+	width: 120px;
+	height: 100px;
 }
 #whoAmI .content .introduce .introduceSection:first-child{
-	padding-left: 0px !important;
+	padding-left: 0px;
+}
+#whoAmI .content .introduce .introduceSection:last-child{
+	padding-right: 0px;
 }
 #whoAmI .content .introduce .introduceSection>p{
 	color: black;
@@ -132,16 +158,20 @@ body {
 #whatTodo{
 	background-image: url(../img/whatTodo/bg.jpg);
 	width: 100%;
-	text-align: center;	
 }
 #whatTodo .content {
 	margin: 0 auto;
 	position: relative;
-	top: 18%;
+	/*top: 18%;*/
 	width: 60%;
+	height: 100%;
 }
-
+#whatTodo .content .upper,
+#whatTodo .content .down{
+	height: 50%;
+}
 #whatTodo .content h2{
+	padding-top: 13%;
 	color: white;
 	font-weight: 800;
 	margin-bottom: 25px;
@@ -154,25 +184,50 @@ body {
 	font-weight: 800;
 }
 #whatTodo .content .introduce{
-	margin-top: 200px;
 	height: 100px;
-	display: inline-block;
+	position: absolute;
+	width: 100%;
+	margin-top: 20px;
+}
+@media screen and (min-width: 1377px) {
+	#whatTodo .content .introduce{
+		/*margin-top: 200px;*/
+	}
+}
+
+@media screen and (max-width: 1024px){
+	#whatTodo .content .introduce .introduceSection>p{
+		font-size: 15px;
+	}
 }
 #whatTodo .content .introduce .introduceSection{
 	float: left;
-	padding-left: 120px;
 }
 #whatTodo .content .introduce .introduceSection:first-child{
 	padding-left: 0px !important;
+}
+#whatTodo .content .introduce .introduceSection:last-child{
+	padding-right: 0px !important;
 }
 #whatTodo .content .introduce .introduceSection>p{
 	color: black;
 }
 
+@media screen and (min-width: 1377px) {
+	#whatTodo .content .introduce .introduceSection img{
+		width: 100px;
+		height: 100px;
+	}
+}
+@media screen and (max-width: 1376px) {
+	#whatTodo .content .introduce .introduceSection img{
+		width: 80px;
+		height: 80px;
+	}
+}
 #howTodo{
 	background-image: url(../img/howTodo/bg.jpg);
 	width: 100%;
-	text-align: center;	
 }
 
 #howTodo .content {
@@ -196,20 +251,25 @@ body {
 }
 
 #howTodo .content .introduce{
-	margin-top: 200px;
+	margin-top: 25%;
 	height: 100px;
+	width: 100%;
 }
 
+#howTodo .content .introduce>img{
+	width: 100%;
+	height: 100px;
+}
 #contact{
 	background-image: url(../img/contact/bg.jpg);
 	width: 100%;
-	text-align: center;	
 }
 #contact .content {
 	margin: 0 auto;
-	position: relative;
-	top: 18%;
+	position: static;
+	padding-top: 10%;
 	width: 60%;
+	height: 95%;
 }
 #contact .content h2{
 	color: white;
@@ -230,13 +290,12 @@ body {
 	margin-top: 100px;
 	height: 150px;
 	display: inline-block;
+	width: 100%;
 }
 
 #contact .content .introduce .introduceBtn {
 	padding-top: 20px;
-	margin-left: 50px;
 	float: left;
-	width: 250px;
 	height: 100%;
 	filter: alpha(opacity:50);
 	background-color: rgba(96, 97, 110, 0.5);
@@ -245,14 +304,35 @@ body {
 	-webkit-transition: background-color 0.5s;
 	-o-transition: background-color 0.5s;
 }
-
+#contact .content .introduce .introduceBtn img{
+	width: 80px;
+	height: 80px;
+}
+#contact .content .introduce .introduceBtn:first-child{
+	margin-left:0px !important;
+}
+#contact .content .introduce .introduceBtn:last-child{
+	margin-right:0px !important;
+}
 #contact .content .introduce .introduceBtn>p {
 	margin-top: 10px;
 	letter-spacing: 2px;
 	color: white;
 	font-size: 16px;
 }
-
+#contact .footer{
+	text-align: center;
+	width: 100%;
+	height: 5%;
+	filter: alpha(opacity:50);
+	background-color: rgba(1, 1, 1, 0.5);
+}
+#contact .footer span{
+	font-size: 18px;
+	color: gray;
+	line-height: 2.5;
+	letter-spacing: 3px;
+}
 /*silder*/
 .sider {
 	position: fixed;
