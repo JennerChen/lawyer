@@ -237,7 +237,10 @@ body {
 	top: 18%;
 	width: 60%;
 }
-
+#howTodo .content .upper,
+#howTodo .content .down{
+	height: 50%;
+}
 #howTodo .content h2{
 	color: white;
 	font-weight: 800;

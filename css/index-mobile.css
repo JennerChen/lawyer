@@ -34,16 +34,23 @@ html,body{
 	width: 80%;
 	height: 100%;
 }
+#whoAmI .content .upper p{
+	font-size: 15px;
+}
+#whoAmI .content .introduce {
+	margin-top: 10px;
+}
 #whoAmI .content .introduce .introduceSection img{
 	width: 60px;
 	height: 50px;
 }
 #whoAmI .content .introduce .introduceSection>p{
 	margin-top: 10px;
+	font-size: 10px;
 }
 #whoAmI .content .introduce .introduceSection>h3{
 	margin-top: 10px;
-	font-size: 24px;
+	font-size: 20px;
 }
 
 #whatTodo .content{
@@ -51,16 +58,20 @@ html,body{
 	width: 80%;
 	height: 100%;
 }
+#whatTodo .content .upper>p{
+	font-size: 15px;
+}
 #whatTodo .content .introduce{
 	margin-top: 10px;
 }
 #whatTodo .content .introduce .introduceSection img{
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 }
 
 #whatTodo .content .introduce .introduceSection>p{
 	margin-top: 10px;
+	margin-bottom: 2px;
 	font-size: 12px;
 }
 
@@ -69,19 +80,23 @@ html,body{
 	width: 80%;
 	height: 100%;
 }
-
+#howTodo .content p {
+	font-size: 15px;
+}
 #howTodo .content h2{
 	padding-top: 10%;
 }
 #howTodo .content .introduce{
-	margin-top: 40%;
+	/*margin-top: 40%;*/
 }
 
 #contact .content {
 	width: 80%;
 	height: 95%;
 }
-
+#contact .content>p {
+	font-size: 15px;
+}
 #contact .content .introduce{
 	margin-top: 20px;
 	height: 75px;
