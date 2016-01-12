@@ -71,7 +71,6 @@ $(function() {
 	$('.next').delegate('img', 'mouseenter', function(event) {
 		event.preventDefault();
 		enableArrowMoving = false;
-		$(this).coolAnimate('bounce')
 	});
 	$('.next').delegate('img', 'mouseleave', function(event) {
 		event.preventDefault();
