@@ -1,5 +1,6 @@
 html,
 body {
+	font-family: "Microsoft YAHEI","Helvetica Neue", Helvetica, Arial, sans-serif;
     height: 100%;
 }
 
@@ -13,7 +14,7 @@ body {
 }
 
 #header {
-	background-image: url(../img/header/header.jpg);
+	background-image: url(/img/header/header.jpg);
 }
 
 #header .content {
@@ -23,7 +24,7 @@ body {
 	width: 60%;
 }
 #header .content>img{
-	src:url("./img/header/header_logo.png");
+	src:url(/img/header/header_logo.png);
 	/*height: ;*/
 }
 #header .content .title {
@@ -82,7 +83,7 @@ body {
 	.introduceBtn {
 		background-color: #60616e !important;
 		filter: Alpha(opacity=50);
-		position: static;  IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 
+		position: static;  /*IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
 		*zoom: 1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
 	}
 
@@ -93,7 +94,7 @@ body {
 }
 
 #whoAmI{
-	background-image: url(../img/whoAmI/bg.jpg);
+	background-image: url(/img/whoAmI/bg.jpg);
 }
 
 #whoAmI .content {
@@ -158,7 +159,7 @@ body {
 }
 
 #whatTodo{
-	background-image: url(../img/whatTodo/bg.jpg);
+	background-image: url(/img/whatTodo/bg.jpg);
 	width: 100%;
 }
 #whatTodo .content {
@@ -227,7 +228,7 @@ body {
 	}
 }
 #howTodo{
-	background-image: url(../img/howTodo/bg.jpg);
+	background-image: url(/img/howTodo/bg.jpg);
 	width: 100%;
 }
 
@@ -265,7 +266,7 @@ body {
 	height: 100px;
 }
 #contact{
-	background-image: url(../img/contact/bg.jpg);
+	background-image: url(/img/contact/bg.jpg);
 	width: 100%;
 }
 #contact .content {

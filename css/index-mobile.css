@@ -3,7 +3,7 @@ html,body{
 	min-width: 280px !important;
 }
 #header {
-	background-image: url(../img/mobile/header/header.jpg) ;
+	background-image: url(/img/mobile/header/header.jpg) ;
 }
 
 #header .content{
