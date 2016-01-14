@@ -30,7 +30,7 @@ gulp.task('less', function () {
 });
 gulp.task('watch', function () {   
     gulp.watch('*.html', function(){
-        console.log('-');
+        console.log('-')
         connect.reload();
     });
 });
