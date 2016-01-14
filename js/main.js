@@ -1,7 +1,7 @@
 /**
  * 根据传入的index导向该slider的页面效果实现
  * @param  {int} or {Jquery element} index [页面的索引或者导向该页面的image link]
- * @author Qing
+ * @author Qing 
  */
 function sliderGo(index) {
 	var el = parseInt(index) >= 0 ? $('.sider').find('img:eq(' + index + ')') : index;
@@ -18,7 +18,9 @@ function sliderGo(index) {
 	}
 
 }
+/** @type {Boolean} [是否允许arrow移动] */
 var enableArrowMoving = true,
+/** @type {string} [记录当前视窗是pc端还是移动端的, 当前是根据屏幕宽度决定的,以838px以区别] */
 	currentView = null;
 $(function() {
 	$.fn.coolAnimate = function(animate, callback) {
@@ -86,6 +88,13 @@ $(function() {
 			}
 		}
 	},2000)
+	/**
+	 * 根据当前的屏幕的宽度,resize某些元素
+	 * 使用js的主要原因是：
+	 * 					1.适应ie8的响应式 
+	 * 					2.手机端的响应式
+	 * 					3.对某些元素的控制比css控制响应式更加精准
+	 */
 	$(window).resize(function(event) {
 		if($('body').width()>=838){
 			// reset width/height when change width from mobile width;
