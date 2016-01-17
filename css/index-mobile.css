@@ -74,6 +74,7 @@ html,body{
 	margin-top: 10px;
 	margin-bottom: 2px;
 	font-size: 12px;
+	font-weight: normal;
 }
 
 #howTodo .content {
@@ -134,8 +135,13 @@ html,body{
 }
 
 .next{
-	bottom: 45px;
-	left: 43%;
-	width: 50px;
-	height: 30px;
+	bottom: 10px;
+	left: 45%;
+	width: 25px;
+	height: 15px;
+}
+
+.next img{
+	width: 22px !important;
+	height: 11px !important;
 }

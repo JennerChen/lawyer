@@ -133,7 +133,6 @@ $(function() {
 			// --if it is IE8, need do some extra width/height change because ie8 not support @media query--------------------------
 			if(window.ISIE8){
 				if($('body').width()<1376){
-					console.log($('#whatTodo').find('.down').find('img').length)
 					$('#whatTodo').find('.down').find('img').width(80).height(80);
 				}else{
 					$('#whatTodo').find('.down').find('img').width(100).height(100);
