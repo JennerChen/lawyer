@@ -23,6 +23,7 @@ var enableArrowMoving = true,
 /** @type {string} [记录当前视窗是pc端还是移动端的, 当前是根据屏幕宽度决定的,以838px以区别] */
 	currentView = null;
 $(function() {
+	window.location.hash = "#home";
 	$.fn.coolAnimate = function(animate, callback) {
 	    var self = this;
 	    animate = "animated " + animate;
@@ -61,6 +62,7 @@ $(function() {
 		after: function(i, selections) {
 			$('.next').show();
 			var currSlide = $(selections[i]);
+			// $(window).trigger('resize');
 			if(i>0 && i <4){
 				$('h2',$('.upper',currSlide)).show().coolAnimate('fadeInLeft');
 				setTimeout(function(){
@@ -76,8 +78,9 @@ $(function() {
 				$('img',$('.content',currSlide)).show();
 				$('.introduceBtn',$('.content',currSlide)).show().coolAnimate('fadeIn bitSlow');
 			}
+			
 			sliderGo(i);
-		},
+		}
 	});
 
 	$('.introduceBtn',$('#header')).click(function(event) {
