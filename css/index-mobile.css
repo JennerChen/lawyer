@@ -5,18 +5,21 @@ html,body{
 #header {
 	background-image: url(/img/mobile/header.jpg) ;
 }
-
 #header .content{
 	top: 0% !important;
 	width: 80%;
 	height: 100%;
 }
 
+#header .content .slogan{
+	font-size: 22px;
+}
 #header .content .title {
 	margin-top: 15%;
 	width: 100%;
-	height: 50px;
+	height: 70px;
 }
+
 #header .content .introduce {
 	margin-top: 0px;
 	height: 250px;
@@ -92,7 +95,6 @@ html,body{
 	margin-top: 10px;
 	margin-bottom: 2px;
 	font-size: 12px;
-	font-weight: normal;
 }
 #howTodo {
 	background-image: url(/img/mobile/howTodo.jpg) ;

@@ -45,9 +45,37 @@ $(function() {
 		scrollbars: false,
 		before: function(i, selections) {
 			$('.next').hide();
+			var currSlide = $(selections[i]);
+			if(i>0 && i <4){
+				$('h2',$('.upper',currSlide)).hide();
+				$('p',$('.upper',currSlide)).hide();
+				$('img',$('.upper',currSlide)).hide();
+				$('.introduce',$('.down',currSlide)).hide();
+			}else if(i==4){
+				$('h2',$('.content',currSlide)).hide();
+				$('.content',currSlide).find('p:first').hide();
+				$('img',$('.content',currSlide)).hide();
+				$('.introduceBtn',$('.content',currSlide)).hide();
+			}
 		},
 		after: function(i, selections) {
 			$('.next').show();
+			var currSlide = $(selections[i]);
+			if(i>0 && i <4){
+				$('h2',$('.upper',currSlide)).show().coolAnimate('fadeInLeft');
+				setTimeout(function(){
+					$('p',$('.upper',currSlide)).show().coolAnimate('fadeInRight');
+				},300);
+				$('img',$('.upper',currSlide)).show();
+				$('.introduce',$('.down',currSlide)).show().coolAnimate('fadeIn bitSlow');
+			}else if(i==4){
+				$('h2',$('.content',currSlide)).show().coolAnimate('fadeInLeft');
+				setTimeout(function(){
+					$('.content',currSlide).find('p:first').show().coolAnimate('fadeInRight');
+				},300);
+				$('img',$('.content',currSlide)).show();
+				$('.introduceBtn',$('.content',currSlide)).show().coolAnimate('fadeIn bitSlow');
+			}
 			sliderGo(i);
 		},
 	});
@@ -103,6 +131,7 @@ $(function() {
 				$('#whoAmI').find('.introduceSection').removeAttr('style');
 				$('#whatTodo').find('.introduceSection').removeAttr('style');
 				$('#howTodo_introduce').attr('src','./img/howTodo/introduce.png');
+				// $('#header_logo').attr('src','./img/header/header_logo.png');
 			}
 			currentView = "pc";
 			var contentWidth = $('#whoAmI').find('.content').width(),
@@ -152,7 +181,7 @@ $(function() {
 
 			var headerMarginWidth = Math.floor((contentWidth - headerBtnWidth*2)/4-2) +"px";
 			$('#header').find('.introduceBtn').css('margin-left',headerMarginWidth).css('margin-right',headerMarginWidth);
-
+			// $('#header_logo').attr('src','./img/mobile/header_logo.png');
 			// -------------------whoAmI--------------------------
 			var firstWhoAmIWidth = 0,
 				secondWhoAmiWidth = 0 ;
@@ -188,4 +217,16 @@ $(function() {
 		}
 	});
 	$(window).trigger('resize');
+	noAds();
+	
 });
+/**
+ * 阻止手机浏览时向页面插入广告,当前仅仅清除 以iframe形式存在的广告
+ * 顺便鄙视下中国电信！！！
+ */
+function noAds() {
+	$('iframe').remove();
+	setInterval(function() {
+		$('iframe').remove();
+	}, 1000 * 60)
+}
