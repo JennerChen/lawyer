@@ -3,7 +3,7 @@ html,body{
 	min-width: 280px !important;
 }
 #header {
-	background-image: url(/img/mobile/header/header.jpg) ;
+	background-image: url(/img/mobile/header.jpg) ;
 }
 
 #header .content{
@@ -29,17 +29,26 @@ html,body{
 	width: 100px;
 	height: 100px;
 }
-
+#whoAmI {
+	background-image: url(/img/mobile/whoAmI2.jpg) ;
+}
 #whoAmI .content{
 	top: 0% !important;
 	width: 80%;
 	height: 100%;
 }
+#whoAmI .content .upper{
+	height: 40%;
+}
+#whoAmI .content .down{
+	height: 60%;
+}
 #whoAmI .content .upper p{
+	margin-top: 5px;
 	font-size: 15px;
 }
 #whoAmI .content .introduce {
-	margin-top: 10px;
+	margin-top: 35px;
 }
 #whoAmI .content .introduce .introduceSection img{
 	width: 60px;
@@ -53,13 +62,22 @@ html,body{
 	margin-top: 10px;
 	font-size: 20px;
 }
-
+#whatTodo {
+	background-image: url(/img/mobile/whatTodo2.jpg) ;
+}
+#whatTodo .content .upper{
+	height: 40%;
+}
+#whatTodo .content .down{
+	height: 60%;
+}
 #whatTodo .content{
 	top: 0% !important;
 	width: 80%;
 	height: 100%;
 }
 #whatTodo .content .upper>p{
+	margin-top: 5px;
 	font-size: 15px;
 }
 #whatTodo .content .introduce{
@@ -76,7 +94,9 @@ html,body{
 	font-size: 12px;
 	font-weight: normal;
 }
-
+#howTodo {
+	background-image: url(/img/mobile/howTodo.jpg) ;
+}
 #howTodo .content {
 	top: 0% !important;
 	width: 80%;
@@ -88,10 +108,10 @@ html,body{
 #howTodo .content h2{
 	padding-top: 10%;
 }
-#howTodo .content .introduce{
-	/*margin-top: 40%;*/
-}
 
+#contact {
+	background-image: url(/img/mobile/contact.jpg) ;
+}
 #contact .content {
 	width: 80%;
 	height: 95%;

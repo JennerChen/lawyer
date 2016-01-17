@@ -102,6 +102,7 @@ $(function() {
 				$('#header').find('.introduceBtn').removeAttr('style');
 				$('#whoAmI').find('.introduceSection').removeAttr('style');
 				$('#whatTodo').find('.introduceSection').removeAttr('style');
+				$('#howTodo_introduce').attr('src','./img/howTodo/introduce.png');
 			}
 			currentView = "pc";
 			var contentWidth = $('#whoAmI').find('.content').width(),
@@ -181,7 +182,8 @@ $(function() {
 				secondWhoAmIpadding = Math.floor((contentWidth - secondWhatTodoWidth)/4-2) +"px";
 			$('#whatTodo').find('.introduceSection:lt(2)').css('margin-left',firstWhoAmIpadding).css('margin-right',firstWhoAmIpadding);
 			$('#whatTodo').find('.introduceSection:gt(1)').css('margin-left',secondWhoAmIpadding).css('margin-right',secondWhoAmIpadding);	
-
+			// -------------------howTodo--------------------------
+			$('#howTodo_introduce').attr('src','./img/mobile/introduce.png');
 
 		}
 	});
