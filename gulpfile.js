@@ -29,14 +29,13 @@ gulp.task('less', function () {
     .pipe(gulp.dest('./public/css'));
 });
 gulp.task('watch', function () {   
-    gulp.watch('*.html', function(){
-        console.log('-')
-        connect.reload();
-    });
+    gulp.watch('*.html', ['reload-dev']);
+    gulp.watch('js/**/*.js', ['reload-dev']);
+    gulp.watch('css/**/*.css', ['reload-dev']);
 });
 //reload server
-gulp.task('reload-dev',['scripts','styles','images'],function() {
-  gulp.src(path.src + '**/*.*')
+gulp.task('reload-dev',function() {
+  gulp.src('**/*.html')
     .pipe(connect.reload());
 });
 gulp.task('webserver', function() {

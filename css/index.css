@@ -227,8 +227,8 @@ body {
 #howTodo .content {
 	margin: 0 auto;
 	position: relative;
-	top: 18%;
 	width: 60%;
+	height: 100%;
 }
 #howTodo .content .upper,
 #howTodo .content .down{
@@ -238,6 +238,7 @@ body {
 	color: white;
 	font-weight: 800;
 	margin-bottom: 25px;
+	padding-top: 13%;
 }
 #howTodo .content p{
 	margin-top: 25px;
@@ -248,7 +249,7 @@ body {
 }
 
 #howTodo .content .introduce{
-	margin-top: 25%;
+	margin-top: 13%;
 	height: 100px;
 	width: 100%;
 }

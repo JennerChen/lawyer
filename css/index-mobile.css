@@ -110,7 +110,9 @@ html,body{
 #howTodo .content h2{
 	padding-top: 10%;
 }
-
+#howTodo .content .introduce{
+	margin-top: 26%;
+} 
 #contact {
 	background-image: url(/img/mobile/contact.jpg) ;
 }

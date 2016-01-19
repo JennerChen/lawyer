@@ -23,6 +23,7 @@ var enableArrowMoving = true,
 /** @type {string} [记录当前视窗是pc端还是移动端的, 当前是根据屏幕宽度决定的,以838px以区别] */
 	currentView = null;
 $(function() {
+	/** @type {String} 解决当使用动画时出现的bugs */
 	window.location.hash = "#home";
 	$.fn.coolAnimate = function(animate, callback) {
 	    var self = this;
@@ -218,8 +219,7 @@ $(function() {
 			$('#howTodo_introduce').attr('src','./img/mobile/introduce.png');
 
 		}
-	});
-	$(window).trigger('resize');
+	}).trigger('resize');
 	noAds();
 	
 });
