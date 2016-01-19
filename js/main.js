@@ -21,7 +21,8 @@ function sliderGo(index) {
 /** @type {Boolean} [是否允许arrow移动] */
 var enableArrowMoving = true,
 /** @type {string} [记录当前视窗是pc端还是移动端的, 当前是根据屏幕宽度决定的,以838px以区别] */
-	currentView = null;
+	currentView = null,
+	disabledWindowResize = false;
 $(function() {
 	/** @type {String} 解决当使用动画时出现的bugs */
 	window.location.hash = "#home";
@@ -47,39 +48,41 @@ $(function() {
 		scrollbars: false,
 		before: function(i, selections) {
 			$('.next').hide();
-			var currSlide = $(selections[i]);
-			if(i>0 && i <4){
-				$('h2',$('.upper',currSlide)).hide();
-				$('p',$('.upper',currSlide)).hide();
-				$('img',$('.upper',currSlide)).hide();
-				$('.introduce',$('.down',currSlide)).hide();
-			}else if(i==4){
-				$('h2',$('.content',currSlide)).hide();
-				$('.content',currSlide).find('p:first').hide();
-				$('img',$('.content',currSlide)).hide();
-				$('.introduceBtn',$('.content',currSlide)).hide();
-			}
+			if($('body').width()>=838){
+				var currSlide = $(selections[i]);
+				if(i>0 && i <4){
+					$('h2',$('.upper',currSlide)).hide();
+					$('p',$('.upper',currSlide)).hide();
+					$('img',$('.upper',currSlide)).hide();
+					$('.introduce',$('.down',currSlide)).hide();
+				}else if(i==4){
+					$('h2',$('.content',currSlide)).hide();
+					$('.content',currSlide).find('p:first').hide();
+					$('img',$('.content',currSlide)).hide();
+					$('.introduceBtn',$('.content',currSlide)).hide();
+				}
+			}		
 		},
 		after: function(i, selections) {
 			$('.next').show();
-			var currSlide = $(selections[i]);
-			// $(window).trigger('resize');
-			if(i>0 && i <4){
-				$('h2',$('.upper',currSlide)).show().coolAnimate('fadeInLeft');
-				setTimeout(function(){
-					$('p',$('.upper',currSlide)).show().coolAnimate('fadeInRight');
-				},300);
-				$('img',$('.upper',currSlide)).show();
-				$('.introduce',$('.down',currSlide)).show().coolAnimate('fadeIn bitSlow');
-			}else if(i==4){
-				$('h2',$('.content',currSlide)).show().coolAnimate('fadeInLeft');
-				setTimeout(function(){
-					$('.content',currSlide).find('p:first').show().coolAnimate('fadeInRight');
-				},300);
-				$('img',$('.content',currSlide)).show();
-				$('.introduceBtn',$('.content',currSlide)).show().coolAnimate('fadeIn bitSlow');
+			if($('body').width()>=838){
+				var currSlide = $(selections[i]);
+				if(i>0 && i <4){
+					$('h2',$('.upper',currSlide)).show().coolAnimate('fadeInLeft');
+					setTimeout(function(){
+						$('p',$('.upper',currSlide)).show().coolAnimate('fadeInRight');
+					},300);
+					$('img',$('.upper',currSlide)).show();
+					$('.introduce',$('.down',currSlide)).show().coolAnimate('fadeIn bitSlow');
+				}else if(i==4){
+					$('h2',$('.content',currSlide)).show().coolAnimate('fadeInLeft');
+					setTimeout(function(){
+						$('.content',currSlide).find('p:first').show().coolAnimate('fadeInRight');
+					},300);
+					$('img',$('.content',currSlide)).show();
+					$('.introduceBtn',$('.content',currSlide)).show().coolAnimate('fadeIn bitSlow');
+				}
 			}
-			
 			sliderGo(i);
 		}
 	});
@@ -128,101 +131,111 @@ $(function() {
 	 * 					3.对某些元素的控制比css控制响应式更加精准
 	 */
 	$(window).resize(function(event) {
-		if($('body').width()>=838){
-			// reset width/height when change width from mobile width;
-			if(currentView && currentView ==='mobile'){
-				$('#header').find('.introduceBtn').removeAttr('style');
-				$('#whoAmI').find('.introduceSection').removeAttr('style');
-				$('#whatTodo').find('.introduceSection').removeAttr('style');
-				$('#howTodo_introduce').attr('src','./img/howTodo/introduce.png');
-				// $('#header_logo').attr('src','./img/header/header_logo.png');
-			}
-			currentView = "pc";
-			var contentWidth = $('#whoAmI').find('.content').width(),
-				whoAmIIntroduce = $('#whoAmI').find('.introduceSection'),
-				whoAmITotalWidth = 0,
-				whatTodoIntroduce = $('#whatTodo').find('.introduceSection'),
-				whatTodoTotalWidth = 0,
-				contactIntroduce = $('#contact').find('.introduceBtn');
-
-			$.each(whoAmIIntroduce, function(index, val) {
-				whoAmITotalWidth += $(val).width();
-			});
-			var whoAmIpadding = Math.floor((contentWidth - whoAmITotalWidth) /3)-5 +"px";
-			$('#whoAmI').find('.introduceSection:gt(0)').css('padding-left',whoAmIpadding);
-
-			$.each(whatTodoIntroduce, function(index, val) {
-				whatTodoTotalWidth += $(val).width();
-			});
-			var whatTodopadding = Math.floor((contentWidth - whatTodoTotalWidth) /3)-5 +"px";
-			$('#whatTodo').find('.introduceSection:gt(0)').css('padding-left',whatTodopadding);
-
-			var contactpadding =  15,
-				contactWidth = Math.floor((contentWidth - 4*contactpadding -10) / contactIntroduce.length);
-			$.each(contactIntroduce, function(index, val) {
-				$(val).width(contactWidth);
-			});
-			$('#contact').find('.introduceBtn:gt(0)').css('margin-left',2*contactpadding + "px");
-
-			// --if it is IE8, need do some extra width/height change because ie8 not support @media query--------------------------
-			if(window.ISIE8){
-				if($('body').width()<1376){
-					$('#whatTodo').find('.down').find('img').width(80).height(80);
-				}else{
-					$('#whatTodo').find('.down').find('img').width(100).height(100);
-				}
-			}
-		}else{
-			// reset width/height when change width from pc width;
-			if(currentView && currentView ==='pc'){
-				$('#whoAmI').find('.introduceSection').removeAttr('style');
-				$('#whatTodo').find('.introduceSection:gt(0)').removeAttr('style');
-				$('#contact').find('.introduceBtn').removeAttr('style');
-			}
-			currentView = "mobile";
-			var contentWidth = $('#header').find('.content').width(),
-				headerBtnWidth = $('#header').find('.introduceBtn').width();
-
-			var headerMarginWidth = Math.floor((contentWidth - headerBtnWidth*2)/4-2) +"px";
-			$('#header').find('.introduceBtn').css('margin-left',headerMarginWidth).css('margin-right',headerMarginWidth);
-			// $('#header_logo').attr('src','./img/mobile/header_logo.png');
-			// -------------------whoAmI--------------------------
-			var firstWhoAmIWidth = 0,
-				secondWhoAmiWidth = 0 ;
-			$.each($('#whoAmI').find('.introduceSection'), function(index, val) {
-				if(index<=1){
-					firstWhoAmIWidth += $(val).width();
-				}else{
-					secondWhoAmiWidth += $(val).width();
-				}
-			});
-			var firstWhoAmIpadding = Math.floor((contentWidth - firstWhoAmIWidth)/4-2) +"px",
-				secondWhoAmIpadding = Math.floor((contentWidth - secondWhoAmiWidth)/4-2) +"px";
-			$('#whoAmI').find('.introduceSection:lt(2)').css('margin-left',firstWhoAmIpadding).css('margin-right',firstWhoAmIpadding);
-			$('#whoAmI').find('.introduceSection:gt(1)').css('margin-left',secondWhoAmIpadding).css('margin-right',secondWhoAmIpadding);
-
-			// -------------------whatTodo--------------------------
-			var firstWhatTodoWidth = 0,
-				secondWhatTodoWidth = 0 ;
-			$.each($('#whatTodo').find('.introduceSection'), function(index, val) {
-				if(index<=1){
-					firstWhatTodoWidth += $(val).width();
-				}else{
-					secondWhatTodoWidth += $(val).width();
-				}
-			});
-			var firstWhoAmIpadding = Math.floor((contentWidth - firstWhatTodoWidth)/4-2) +"px",
-				secondWhoAmIpadding = Math.floor((contentWidth - secondWhatTodoWidth)/4-2) +"px";
-			$('#whatTodo').find('.introduceSection:lt(2)').css('margin-left',firstWhoAmIpadding).css('margin-right',firstWhoAmIpadding);
-			$('#whatTodo').find('.introduceSection:gt(1)').css('margin-left',secondWhoAmIpadding).css('margin-right',secondWhoAmIpadding);	
-			// -------------------howTodo--------------------------
-			$('#howTodo_introduce').attr('src','./img/mobile/introduce.png');
-
-		}
+		resizePage();
 	}).trigger('resize');
 	noAds();
 	
 });
+function resizePage(){
+	if (disabledWindowResize) {
+		return
+	} else {
+		setInterval(function() {
+			disabledWindowResize = false;
+		}, 50)
+	}
+	if($('body').width()>=838){
+		// reset width/height when change width from mobile width;
+		if(currentView && currentView ==='mobile'){
+			$('#header').find('.introduceBtn').removeAttr('style');
+			$('#whoAmI').find('.introduceSection').removeAttr('style');
+			$('#whatTodo').find('.introduceSection').removeAttr('style');
+			$('#howTodo_introduce').attr('src','./img/howTodo/introduce.png');
+			// $('#header_logo').attr('src','./img/header/header_logo.png');
+		}
+		currentView = "pc";
+		var contentWidth = $('#whoAmI').find('.content').width(),
+			whoAmIIntroduce = $('#whoAmI').find('.introduceSection'),
+			whoAmITotalWidth = 0,
+			whatTodoIntroduce = $('#whatTodo').find('.introduceSection'),
+			whatTodoTotalWidth = 0,
+			contactIntroduce = $('#contact').find('.introduceBtn');
+
+		$.each(whoAmIIntroduce, function(index, val) {
+			whoAmITotalWidth += $(val).width();
+		});
+		var whoAmIpadding = Math.floor((contentWidth - whoAmITotalWidth) /3)-5 +"px";
+		$('#whoAmI').find('.introduceSection:gt(0)').css('padding-left',whoAmIpadding);
+
+		$.each(whatTodoIntroduce, function(index, val) {
+			whatTodoTotalWidth += $(val).width();
+		});
+		var whatTodopadding = Math.floor((contentWidth - whatTodoTotalWidth) /3)-5 +"px";
+		$('#whatTodo').find('.introduceSection:gt(0)').css('padding-left',whatTodopadding);
+
+		var contactpadding =  15,
+			contactWidth = Math.floor((contentWidth - 4*contactpadding -10) / contactIntroduce.length);
+		$.each(contactIntroduce, function(index, val) {
+			$(val).width(contactWidth);
+		});
+		$('#contact').find('.introduceBtn:gt(0)').css('margin-left',2*contactpadding + "px");
+
+		// --if it is IE8, need do some extra width/height change because ie8 not support @media query--------------------------
+		if(window.ISIE8){
+			if($('body').width()<1376){
+				$('#whatTodo').find('.down').find('img').width(80).height(80);
+			}else{
+				$('#whatTodo').find('.down').find('img').width(100).height(100);
+			}
+		}
+	}else{
+		// reset width/height when change width from pc width;
+		if(currentView && currentView ==='pc'){
+			$('#whoAmI').find('.introduceSection').removeAttr('style');
+			$('#whatTodo').find('.introduceSection:gt(0)').removeAttr('style');
+			$('#contact').find('.introduceBtn').removeAttr('style');
+		}
+		currentView = "mobile";
+		var contentWidth = $('#header').find('.content').width(),
+			headerBtnWidth = $('#header').find('.introduceBtn').width();
+
+		var headerMarginWidth = Math.floor((contentWidth - headerBtnWidth*2)/4-2) +"px";
+		$('#header').find('.introduceBtn').css('margin-left',headerMarginWidth).css('margin-right',headerMarginWidth);
+		// $('#header_logo').attr('src','./img/mobile/header_logo.png');
+		// -------------------whoAmI--------------------------
+		var firstWhoAmIWidth = 0,
+			secondWhoAmiWidth = 0 ;
+		$.each($('#whoAmI').find('.introduceSection'), function(index, val) {
+			if(index<=1){
+				firstWhoAmIWidth += $(val).width();
+			}else{
+				secondWhoAmiWidth += $(val).width();
+			}
+		});
+		var firstWhoAmIpadding = Math.floor((contentWidth - firstWhoAmIWidth)/4-2) +"px",
+			secondWhoAmIpadding = Math.floor((contentWidth - secondWhoAmiWidth)/4-2) +"px";
+		$('#whoAmI').find('.introduceSection:lt(2)').css('margin-left',firstWhoAmIpadding).css('margin-right',firstWhoAmIpadding);
+		$('#whoAmI').find('.introduceSection:gt(1)').css('margin-left',secondWhoAmIpadding).css('margin-right',secondWhoAmIpadding);
+
+		// -------------------whatTodo--------------------------
+		var firstWhatTodoWidth = 0,
+			secondWhatTodoWidth = 0 ;
+		$.each($('#whatTodo').find('.introduceSection'), function(index, val) {
+			if(index<=1){
+				firstWhatTodoWidth += $(val).width();
+			}else{
+				secondWhatTodoWidth += $(val).width();
+			}
+		});
+		var firstWhoAmIpadding = Math.floor((contentWidth - firstWhatTodoWidth)/4-2) +"px",
+			secondWhoAmIpadding = Math.floor((contentWidth - secondWhatTodoWidth)/4-2) +"px";
+		$('#whatTodo').find('.introduceSection:lt(2)').css('margin-left',firstWhoAmIpadding).css('margin-right',firstWhoAmIpadding);
+		$('#whatTodo').find('.introduceSection:gt(1)').css('margin-left',secondWhoAmIpadding).css('margin-right',secondWhoAmIpadding);	
+		// -------------------howTodo--------------------------
+		$('#howTodo_introduce').attr('src','./img/mobile/introduce.png');
+
+	}
+}
 /**
  * 阻止手机浏览时向页面插入广告,当前仅仅清除 以iframe形式存在的广告
  * 顺便鄙视下中国电信！！！
