@@ -16,7 +16,6 @@ function sliderGo(index) {
 	}else{
 		$('.next').find('img').attr('src','./img/global/next.png')
 	}
-
 }
 /** @type {Boolean} [是否允许arrow移动] */
 var enableArrowMoving = true,
@@ -130,7 +129,7 @@ $(function() {
 	 * 					2.手机端的响应式
 	 * 					3.对某些元素的控制比css控制响应式更加精准
 	 */
-	$(window).resize(function(event) {
+	$(window).resize(function() {
 		resizePage();
 	}).trigger('resize');
 	noAds();

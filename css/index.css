@@ -73,7 +73,7 @@ body {
 	font-weight: 800;
 }
 
-/*background opactiy hack for ie6,7,8*/
+/*background opacity hack for ie6,7,8*/
 @media \0screen\,screen\9 {
 	/* 只支持IE6、7、8 */
 	.introduceBtn {
