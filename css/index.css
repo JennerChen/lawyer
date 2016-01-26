@@ -1,16 +1,16 @@
 html,
 body {
-	font-family: "Microsoft YAHEI","Helvetica Neue", Helvetica, Arial, sans-serif;
-    height: 100%;
+	font-family: "Microsoft YAHEI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	height: 100%;
 }
 
 .slider {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100%;
-    width: 100%;
-    text-align: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100%;
+	width: 100%;
+	text-align: center;
 }
 
 #header {
@@ -55,8 +55,9 @@ body {
 	-webkit-transition: background-color 0.5s;
 	-o-transition: background-color 0.5s;
 }
-#header .content .introduce .introduceBtn:first-child{
-	margin-left:0px;
+
+#header .content .introduce .introduceBtn:first-child {
+	margin-left: 0px;
 }
 
 #header .content .introduce .introduceBtn:hover {
@@ -74,7 +75,8 @@ body {
 }
 
 /*background opacity hack for ie6,7,8*/
-@media \0screen\,screen\9 {
+@media \0screen\, screen\9 {
+
 	/* 只支持IE6、7、8 */
 	.introduceBtn {
 		background-color: #60616e !important;
@@ -82,14 +84,15 @@ body {
 		position: static;  /*IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
 		*zoom: 1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
 	}
-
 	.introduceBtn>p,
 	.introduceBtn>img {
 		position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
 	}
+
+
 }
 
-#whoAmI{
+#whoAmI {
 	background-image: url(/img/whoAmI/bg.jpg);
 }
 
@@ -101,125 +104,147 @@ body {
 }
 
 #whoAmI .content .upper,
-#whoAmI .content .down{
+#whoAmI .content .down {
 	height: 50%;
 }
-#whoAmI .content h2{
+
+#whoAmI .content h2 {
 	padding-top: 13%;
 	color: white;
 	font-weight: 800;
 	margin-bottom: 25px;
 }
-#whoAmI .content p{
+
+#whoAmI .content p {
 	margin-top: 25px;
 	color: white;
 	font-weight: 800;
 	letter-spacing: 2px;
 	font-size: 20px;
 }
-#whoAmI .content .introduce{
-	margin-top: 20px;
-	/*height: 100px;*/
+
+#whoAmI .content .introduce {
+	margin-top: 20px;	/*height: 100px;*/
 	text-align: center;
 	display: inline-block;
 	width: 100%;
 }
-@media screen and (max-width: 1024px){
-	#whoAmI .content .introduce .introduceSection>p{
+
+@media screen and (max-width:1024px) {
+	#whoAmI .content .introduce .introduceSection>p {
 		font-size: 16px;
 	}
-	#whoAmI .content .introduce .introduceSection>h3{
+
+	#whoAmI .content .introduce .introduceSection>h3 {
 		font-size: 24px;
 	}
+
 }
-#whoAmI .content .introduce .introduceSection{
+
+#whoAmI .content .introduce .introduceSection {
 	float: left;
 }
-#whoAmI .content .introduce .introduceSection img{
+
+#whoAmI .content .introduce .introduceSection img {
 	width: 120px;
 	height: 100px;
 }
-#whoAmI .content .introduce .introduceSection:first-child{
+
+#whoAmI .content .introduce .introduceSection:first-child {
 	padding-left: 0px;
 }
-#whoAmI .content .introduce .introduceSection:last-child{
+
+#whoAmI .content .introduce .introduceSection:last-child {
 	padding-right: 0px;
 }
-#whoAmI .content .introduce .introduceSection>p{
+
+#whoAmI .content .introduce .introduceSection>p {
 	color: black;
 }
-#whoAmI .content .introduce .introduceSection>h3{
+
+#whoAmI .content .introduce .introduceSection>h3 {
 	color: black;
 	font-size: 28px;
 	font-weight: 900;
 }
 
-#whatTodo{
+#whatTodo {
 	background-image: url(/img/whatTodo/bg.jpg);
 	width: 100%;
 }
+
 #whatTodo .content {
 	margin: 0 auto;
-	position: relative;
-	/*top: 18%;*/
+	position: relative;	/*top: 18%;*/
 	width: 60%;
 	height: 100%;
 }
+
 #whatTodo .content .upper,
-#whatTodo .content .down{
+#whatTodo .content .down {
 	height: 50%;
 }
-#whatTodo .content h2{
+
+#whatTodo .content h2 {
 	padding-top: 13%;
 	color: white;
 	font-weight: 800;
 	margin-bottom: 25px;
 }
-#whatTodo .content p{
+
+#whatTodo .content p {
 	margin-top: 25px;
 	color: white;
 	letter-spacing: 2px;
 	font-size: 20px;
 	font-weight: 800;
 }
-#whatTodo .content .introduce{
+
+#whatTodo .content .introduce {
 	height: 100px;
 	position: absolute;
 	width: 100%;
 	margin-top: 40px;
 }
 
-@media screen and (max-width: 1024px){
-	#whatTodo .content .introduce .introduceSection>p{
+@media screen and (max-width:1024px) {
+	#whatTodo .content .introduce .introduceSection>p {
 		font-size: 15px;
 	}
+
 }
-#whatTodo .content .introduce .introduceSection{
+
+#whatTodo .content .introduce .introduceSection {
 	float: left;
 }
-#whatTodo .content .introduce .introduceSection:first-child{
+
+#whatTodo .content .introduce .introduceSection:first-child {
 	padding-left: 0px !important;
 }
-#whatTodo .content .introduce .introduceSection:last-child{
+
+#whatTodo .content .introduce .introduceSection:last-child {
 	padding-right: 0px !important;
 }
-#whatTodo .content .introduce .introduceSection>p{
+
+#whatTodo .content .introduce .introduceSection>p {
 	color: black;
 	font-weight: normal;
 }
 
-#whatTodo .content .introduce .introduceSection img{
+#whatTodo .content .introduce .introduceSection img {
 	width: 100px;
 	height: 100px;
 }
 
-@media screen and (max-width: 1376px) {
-	#whatTodo .content .introduce .introduceSection img{
+@media screen and (max-width:1376px) {
+	#whatTodo .content .introduce .introduceSection img {
 		width: 80px;
 		height: 80px;
 	}
+
 }
-#howTodo{
+
+#howTodo {
 	background-image: url(/img/howTodo/bg.jpg);
 	width: 100%;
 }
@@ -230,17 +255,20 @@ body {
 	width: 60%;
 	height: 100%;
 }
+
 #howTodo .content .upper,
-#howTodo .content .down{
+#howTodo .content .down {
 	height: 50%;
 }
-#howTodo .content h2{
+
+#howTodo .content h2 {
 	color: white;
 	font-weight: 800;
 	margin-bottom: 25px;
 	padding-top: 13%;
 }
-#howTodo .content p{
+
+#howTodo .content p {
 	margin-top: 25px;
 	color: white;
 	letter-spacing: 2px;
@@ -248,20 +276,22 @@ body {
 	font-weight: 800;
 }
 
-#howTodo .content .introduce{
+#howTodo .content .introduce {
 	margin-top: 13%;
 	height: 100px;
 	width: 100%;
 }
 
-#howTodo .content .introduce>img{
+#howTodo .content .introduce>img {
 	width: 100%;
 	height: 100px;
 }
-#contact{
+
+#contact {
 	background-image: url(/img/contact/bg.jpg);
 	width: 100%;
 }
+
 #contact .content {
 	margin: 0 auto;
 	position: static;
@@ -269,22 +299,25 @@ body {
 	width: 60%;
 	height: 95%;
 }
-#contact .content h2{
+
+#contact .content h2 {
 	color: white;
 	font-weight: 800;
 	margin-bottom: 25px;
 }
-#contact .content>p{
+
+#contact .content>p {
 	font-weight: 800;
 }
-#contact .content p{
+
+#contact .content p {
 	margin-top: 25px;
 	color: white;
 	letter-spacing: 2px;
 	font-size: 20px;
 }
 
-#contact .content .introduce{
+#contact .content .introduce {
 	margin-top: 100px;
 	height: 150px;
 	display: inline-block;
@@ -304,23 +337,27 @@ body {
 	-o-transition: background-color 0.5s;
 }
 
-#contact .content .introduce .introduceBtn img{
+#contact .content .introduce .introduceBtn img {
 	width: 80px;
 	height: 80px;
 }
-#contact .content .introduce .introduceBtn:first-child{
-	margin-left:0px !important;
+
+#contact .content .introduce .introduceBtn:first-child {
+	margin-left: 0px !important;
 }
-#contact .content .introduce .introduceBtn:last-child{
-	margin-right:0px !important;
+
+#contact .content .introduce .introduceBtn:last-child {
+	margin-right: 0px !important;
 }
+
 #contact .content .introduce .introduceBtn>p {
 	margin-top: 10px;
 	letter-spacing: 2px;
 	color: white;
 	font-size: 16px;
 }
-#contact .footer{
+
+#contact .footer {
 	text-align: center;
 	width: 100%;
 	height: 5%;
@@ -328,12 +365,14 @@ body {
 	background-color: rgb(1, 1, 1);
 	background-color: rgba(1, 1, 1, 0.5);
 }
-#contact .footer span{
+
+#contact .footer span {
 	font-size: 18px;
 	color: gray;
 	line-height: 2.5;
 	letter-spacing: 3px;
 }
+
 /*silder*/
 .sider {
 	position: fixed;
@@ -352,177 +391,190 @@ body {
 .sider img:hover {
 	opacity: 1;
 }
-.next{
+
+.next {
 	bottom: 50px;
 	position: fixed;
 	left: 48%;
 	width: 50px;
 	height: 30px;
 }
-.next>img{
+
+.next>img {
 	cursor: pointer;
 }
 
-
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
 }
-.animated.bitSlow {
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes slideInDown {
-  from {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
 
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+.animated.bitSlow {
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes slideInDown {
+	from {
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
 }
 
 @keyframes slideInDown {
-  from {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
+	from {
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+		visibility: visible;
+	}
 
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
 }
 
 .slideInDown {
-  -webkit-animation-name: slideInDown;
-  animation-name: slideInDown;
+	-webkit-animation-name: slideInDown;
+	animation-name: slideInDown;
 }
 
 @-webkit-keyframes slideInUp {
-  from {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
+	from {
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+		visibility: visible;
+	}
 
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
 }
 
 @keyframes slideInUp {
-  from {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
+	from {
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+		visibility: visible;
+	}
 
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
 }
 
 .slideInUp {
-  -webkit-animation-name: slideInUp;
-  animation-name: slideInUp;
+	-webkit-animation-name: slideInUp;
+	animation-name: slideInUp;
 }
 
 @-webkit-keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
 
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+
 }
 
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
 
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+
 }
 
 .fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
+	-webkit-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
 }
 
 @-webkit-keyframes fadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
 
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+
 }
 
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
 
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+
 }
 
 .fadeInRight {
-  -webkit-animation-name: fadeInRight;
-  animation-name: fadeInRight;
+	-webkit-animation-name: fadeInRight;
+	animation-name: fadeInRight;
 }
 
 @-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+	from {
+		opacity: 0;
+	}
 
-  to {
-    opacity: 1;
-  }
+	to {
+		opacity: 1;
+	}
+
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+	from {
+		opacity: 0;
+	}
 
-  to {
-    opacity: 1;
-  }
+	to {
+		opacity: 1;
+	}
+
 }
 
 .fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
 }
