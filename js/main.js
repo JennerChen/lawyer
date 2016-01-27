@@ -50,14 +50,14 @@ $(function () {
 			if ($('body').width() >= 838) {
 				var currSlide = $(selections[i]);
 				if (i > 0 && i < 4) {
-					$('h2', $('.upper', currSlide)).hide();
-					$('p', $('.upper', currSlide)).hide();
-					$('img', $('.upper', currSlide)).hide();
-					$('.introduce', $('.down', currSlide)).hide();
+					$('h2', $('.upper', currSlide)).css('opacity',0);
+					$('p', $('.upper', currSlide)).css('opacity',0);
+					$('img', $('.upper', currSlide)).css('opacity',0);
+					$('.introduce', $('.down', currSlide)).css('opacity',0);
 				} else if (i == 4) {
-					$('h2', $('.content', currSlide)).hide();
-					$('.content', currSlide).find('p:first').hide();
-					$('img', $('.content', currSlide)).hide();
+					$('h2', $('.content', currSlide)).css('opacity',0);
+					$('.content', currSlide).find('p:first').css('opacity',0);
+					$('img', $('.content', currSlide)).css('opacity',0);
 					$('.introduceBtn', $('.content', currSlide)).hide();
 				}
 			}
@@ -67,18 +67,18 @@ $(function () {
 			if ($('body').width() >= 838) {
 				var currSlide = $(selections[i]);
 				if (i > 0 && i < 4) {
-					$('h2', $('.upper', currSlide)).show().coolAnimate('fadeInLeft');
+					$('h2', $('.upper', currSlide)).removeAttr('style').coolAnimate('fadeInLeft');
 					setTimeout(function () {
-						$('p', $('.upper', currSlide)).show().coolAnimate('fadeInRight');
+						$('p', $('.upper', currSlide)).removeAttr('style').coolAnimate('fadeInRight');
 					}, 300);
-					$('img', $('.upper', currSlide)).show();
-					$('.introduce', $('.down', currSlide)).show().coolAnimate('fadeIn bitSlow');
+					$('img', $('.upper', currSlide)).removeAttr('style');
+					$('.introduce', $('.down', currSlide)).removeAttr('style').coolAnimate('fadeIn bitSlow');
 				} else if (i == 4) {
-					$('h2', $('.content', currSlide)).show().coolAnimate('fadeInLeft');
+					$('h2', $('.content', currSlide)).removeAttr('style').coolAnimate('fadeInLeft');
 					setTimeout(function () {
-						$('.content', currSlide).find('p:first').show().coolAnimate('fadeInRight');
+						$('.content', currSlide).find('p:first').removeAttr('style').coolAnimate('fadeInRight');
 					}, 300);
-					$('img', $('.content', currSlide)).show();
+					$('img', $('.content', currSlide)).removeAttr('style');
 					$('.introduceBtn', $('.content', currSlide)).show().coolAnimate('fadeIn bitSlow');
 				}
 			}
@@ -122,6 +122,9 @@ $(function () {
 			}
 		}
 	}, 2000);
+	$('#mailTo').click(function () {
+		window.location.href = "mailto:bd@zhaogelvshi.com";
+	});
 	/**
 	 * 根据当前的屏幕的宽度,resize某些元素
 	 * 使用js的主要原因是：
