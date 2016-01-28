@@ -1,0 +1,13 @@
+/*noinspection ALL*/
+@media \0screen\,screen\9 {
+    .introduceBtn {
+        background-color: #60616e !important;
+        filter: Alpha(opacity=50);
+        position: static;
+        *zoom: 1;
+    }
+    .introduceBtn > p,
+    .introduceBtn img {
+        position: relative; /* 设置子元素为相对定位，可让子元素不继承Alpha值 */
+    }
+}

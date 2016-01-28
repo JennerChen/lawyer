@@ -50,14 +50,14 @@ $(function () {
 			if ($('body').width() >= 838) {
 				var currSlide = $(selections[i]);
 				if (i > 0 && i < 4) {
-					$('h2', $('.upper', currSlide)).css('opacity',0);
-					$('p', $('.upper', currSlide)).css('opacity',0);
-					$('img', $('.upper', currSlide)).css('opacity',0);
-					$('.introduce', $('.down', currSlide)).css('opacity',0);
+					$('h2', $('.upper', currSlide)).css('opacity', 0);
+					$('p', $('.upper', currSlide)).css('opacity', 0);
+					$('img', $('.upper', currSlide)).css('opacity', 0);
+					$('.introduce', $('.down', currSlide)).css('opacity', 0);
 				} else if (i == 4) {
-					$('h2', $('.content', currSlide)).css('opacity',0);
-					$('.content', currSlide).find('p:first').css('opacity',0);
-					$('img', $('.content', currSlide)).css('opacity',0);
+					$('h2', $('.content', currSlide)).css('opacity', 0);
+					$('.content', currSlide).find('p:first').css('opacity', 0);
+					$('img', $('.content', currSlide)).css('opacity', 0);
 					$('.introduceBtn', $('.content', currSlide)).hide();
 				}
 			}
@@ -138,6 +138,7 @@ $(function () {
 	noAds();
 
 });
+
 function resizePage() {
 	if (disabledWindowResize) {
 		return

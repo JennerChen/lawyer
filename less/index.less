@@ -1,0 +1,329 @@
+html,
+body {
+	font-family: "Microsoft YAHEI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	height: 100%;
+	.slider {
+		background-size: cover !important;
+		background: no-repeat center center;
+		height: 100% ;
+		width: 100%;
+		text-align: center;
+	}
+	#header {
+		background-image: url(/img/header/header.jpg);
+		.content {
+			margin: 0 auto;
+			position: relative;
+			top: 30%;
+			width: 60%;
+			.title {
+				width: 404px;
+				height: 118px;
+			}
+			.slogan {
+				color: white;
+				font-size: 30px;
+				font-weight: 800;
+				margin-top: 30px;
+			}
+			.introduce {
+				margin-top: 40px;
+				height: 100px;
+				display: inline-block;
+				.introduceBtn {
+					padding-top: 15px;
+					margin-left: 30px;
+					float: left;
+					width: 100px;
+					height: 100%;
+					background-color: #60616e;
+					background-color: rgba(96, 97, 110, 0.5);
+					transition: background-color 0.5s;
+					-moz-transition: background-color 0.5s;
+					-webkit-transition: background-color 0.5s;
+					-o-transition: background-color 0.5s;
+					&:first-child {
+						margin-left: 0;
+					}
+
+					&:hover {
+						cursor: pointer;
+						background-color: #00A0EA !important;
+						background-color: rgba(0, 160, 234, 1);
+						filter: Alpha(opacity=100);
+					}
+					& > p {
+						letter-spacing: 2px;
+						color: white;
+						padding-top: 5px;
+						font-weight: 800;
+					}
+				}
+
+			}
+
+		}
+	}
+	#whoAmI {
+		background-image: url(/img/whoAmI/bg.jpg);
+		.content {
+			margin: 0 auto;
+			position: relative;
+			width: 60%;
+			height: 100%;
+			.upper,
+			.down {
+				height: 50%;
+			}
+			h2 {
+				padding-top: 13%;
+				color: white;
+				font-weight: 800;
+				margin-bottom: 25px;
+			}
+			p {
+				margin-top: 25px;
+				color: white;
+				font-weight: 800;
+				letter-spacing: 2px;
+				font-size: 20px;
+			}
+			.introduce {
+				margin-top: 20px;
+				text-align: center;
+				display: inline-block;
+				width: 100%;
+				.introduceSection {
+					float: left;
+					@media screen and (max-width: 1024px) {
+						& > p {
+							font-size: 16px;
+						}
+
+						& > h3 {
+							font-size: 24px;
+						}
+					}
+					& > p {
+						color: black;
+					}
+					& > h3 {
+						color: black;
+						font-size: 28px;
+						font-weight: 900;
+					}
+					img {
+						width: 120px;
+						height: 100px;
+					}
+					&:first-child {
+						padding-left: 0;
+					}
+					&:last-child {
+						padding-right: 0;
+					}
+				}
+
+			}
+
+		}
+	}
+	#whatTodo {
+		background-image: url(/img/whatTodo/bg.jpg);
+		width: 100%;
+		.content {
+			margin: 0 auto;
+			position: relative;
+			width: 60%;
+			height: 100%;
+			.upper,
+			.down {
+				height: 50%;
+			}
+			h2 {
+				padding-top: 13%;
+				color: white;
+				font-weight: 800;
+				margin-bottom: 25px;
+			}
+			p {
+				margin-top: 25px;
+				color: white;
+				letter-spacing: 2px;
+				font-size: 20px;
+				font-weight: 800;
+			}
+			.introduce {
+				height: 100px;
+				position: absolute;
+				width: 100%;
+				margin-top: 40px;
+				.introduceSection {
+					float: left;
+					& > P {
+						color: black;
+						font-weight: normal;
+						@media screen and (max-width: 1024px) {
+							& {
+								font-size: 15px;
+							}
+						}
+					}
+					&:first-child {
+						padding-left: 0 !important;
+					}
+					&:last-child {
+						padding-right: 0 !important;
+					}
+					img {
+						width: 100px;
+						height: 100px;
+						@media screen and (max-width: 1376px) {
+							& {
+								width: 80px;
+								height: 80px;
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+	#howTodo {
+		background-image: url(/img/howTodo/bg.jpg);
+		width: 100%;
+		.content {
+			margin: 0 auto;
+			position: relative;
+			width: 60%;
+			height: 100%;
+			.upper,
+			.down {
+				height: 50%;
+			}
+			h2 {
+				color: white;
+				font-weight: 800;
+				margin-bottom: 25px;
+				padding-top: 13%;
+			}
+			p {
+				margin-top: 25px;
+				color: white;
+				letter-spacing: 2px;
+				font-size: 20px;
+				font-weight: 800;
+			}
+			.introduce {
+				margin-top: 13%;
+				height: 100px;
+				width: 100%;
+				>img {
+					width: 100%;
+					height: 100px;
+				}
+			}
+		}
+	}
+	#contact {
+		background-image: url(/img/contact/bg.jpg);
+		width: 100%;
+		.content {
+			margin: 0 auto;
+			position: static;
+			padding-top: 10%;
+			width: 60%;
+			height: 95%;
+			h2 {
+				color: white;
+				font-weight: 800;
+				margin-bottom: 25px;
+			}
+			>p {
+				font-weight: 800;
+			}
+			p {
+				margin-top: 25px;
+				color: white;
+				letter-spacing: 2px;
+				font-size: 20px;
+			}
+			.introduce {
+				margin-top: 100px;
+				height: 150px;
+				display: inline-block;
+				width: 100%;
+				.introduceBtn {
+					padding-top: 20px;
+					float: left;
+					height: 100%;
+					background-color: rgb(96, 97, 110);
+					background-color: rgba(96, 97, 110, 0.5);
+					transition: background-color 0.5s;
+					-moz-transition: background-color 0.5s;
+					-webkit-transition: background-color 0.5s;
+					-o-transition: background-color 0.5s;
+					img {
+						width: 80px;
+						height: 80px;
+						&:first-child {
+							margin-left: 0 !important;
+						}
+						&:last-child {
+							margin-right: 0 !important;
+						}
+						#mailTo{
+							cursor: pointer;
+						}
+					}
+					>p {
+						margin-top: 10px;
+						letter-spacing: 2px;
+						color: white;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.footer {
+			text-align: center;
+			width: 100%;
+			height: 5%;
+			filter: Alpha(opacity=50);
+			background-color: rgb(1, 1, 1);
+			background-color: rgba(1, 1, 1, 0.5);
+			span {
+				font-size: 18px;
+				color: gray;
+				line-height: 2.5;
+				letter-spacing: 3px;
+			}
+		}
+	}
+	.sider {
+		position: fixed;
+		right: 10px;
+		top: 40%;
+		z-index: 99;
+		width: 27px;
+		text-align: center;
+		img {
+			opacity: 0.8;
+			cursor: pointer;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+	.next {
+		bottom: 50px;
+		position: fixed;
+		left: 48%;
+		width: 50px;
+		height: 30px;
+		>img {
+			cursor: pointer;
+		}
+	}
+}
