@@ -1,0 +1,203 @@
+html,
+body {
+  max-width: 838px;
+  min-width: 280px !important;
+}
+html #header,
+body #header {
+  background-image: url(/img/mobile/header.jpg);
+}
+html #header .content,
+body #header .content {
+  top: 0 !important;
+  width: 80%;
+  height: 100%;
+}
+html #header .content .slogan,
+body #header .content .slogan {
+  font-size: 22px;
+}
+html #header .content .title,
+body #header .content .title {
+  margin-top: 15%;
+  width: 100%;
+  height: 70px;
+}
+html #header .content .introduce,
+body #header .content .introduce {
+  margin-top: 0;
+  height: 250px;
+}
+html #header .content .introduce .introduceBtn,
+body #header .content .introduce .introduceBtn {
+  margin-top: 25px;
+  padding-top: 15px;
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+html #whoAmI,
+body #whoAmI {
+  background-image: url(/img/mobile/whoAmI2.jpg);
+}
+html #whoAmI .content,
+body #whoAmI .content {
+  top: 0 !important;
+  width: 80%;
+  height: 100%;
+}
+html #whoAmI .content .upper,
+body #whoAmI .content .upper {
+  height: 40%;
+}
+html #whoAmI .content .upper p,
+body #whoAmI .content .upper p {
+  margin-top: 5px;
+  font-size: 15px;
+}
+html #whoAmI .content .down,
+body #whoAmI .content .down {
+  height: 60%;
+}
+html #whoAmI .content .introduce,
+body #whoAmI .content .introduce {
+  margin-top: 35px;
+}
+html #whoAmI .content .introduce .introduceSection img,
+body #whoAmI .content .introduce .introduceSection img {
+  width: 60px;
+  height: 50px;
+}
+html #whoAmI .content .introduce .introduceSection > p,
+body #whoAmI .content .introduce .introduceSection > p {
+  margin-top: 10px;
+  font-size: 10px;
+}
+html #whoAmI .content .introduce .introduceSection > h3,
+body #whoAmI .content .introduce .introduceSection > h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+html #whatTodo,
+body #whatTodo {
+  background-image: url(/img/mobile/whatTodo2.jpg);
+}
+html #whatTodo .content,
+body #whatTodo .content {
+  top: 0 !important;
+  width: 80%;
+  height: 100%;
+}
+html #whatTodo .content .upper,
+body #whatTodo .content .upper {
+  height: 40%;
+}
+html #whatTodo .content .upper > p,
+body #whatTodo .content .upper > p {
+  margin-top: 5px;
+  font-size: 15px;
+}
+html #whatTodo .content .down,
+body #whatTodo .content .down {
+  height: 60%;
+}
+html #whatTodo .content .introduce,
+body #whatTodo .content .introduce {
+  margin-top: 10px;
+}
+html #whatTodo .content .introduce .introduceSection img,
+body #whatTodo .content .introduce .introduceSection img {
+  width: 40px;
+  height: 40px;
+}
+html #whatTodo .content .introduce .introduceSection > p,
+body #whatTodo .content .introduce .introduceSection > p {
+  margin-top: 10px;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+html #howTodo,
+body #howTodo {
+  background-image: url(/img/mobile/howTodo.jpg);
+}
+html #howTodo .content,
+body #howTodo .content {
+  top: 0 !important;
+  width: 80%;
+  height: 100%;
+}
+html #howTodo .content p,
+body #howTodo .content p {
+  font-size: 15px;
+}
+html #howTodo .content h2,
+body #howTodo .content h2 {
+  padding-top: 10%;
+}
+html #howTodo .content .introduce,
+body #howTodo .content .introduce {
+  margin-top: 26%;
+}
+html #contact,
+body #contact {
+  background-image: url(/img/mobile/contact.jpg);
+}
+html #contact .content,
+body #contact .content {
+  width: 80%;
+  height: 95%;
+  padding-top: 1%;
+}
+html #contact .content h2,
+body #contact .content h2 {
+  margin-bottom: 2px;
+}
+html #contact .content > p,
+body #contact .content > p {
+  margin-top: 1px;
+  font-size: 15px;
+}
+html #contact .content .introduce,
+body #contact .content .introduce {
+  margin-top: 1px;
+  height: 75px;
+}
+html #contact .content .introduce .introduceBtn,
+body #contact .content .introduce .introduceBtn {
+  margin-top: 5px;
+  padding-top: 5px;
+  width: 100%;
+}
+html #contact .content .introduce .introduceBtn > p,
+body #contact .content .introduce .introduceBtn > p {
+  font-size: 10px;
+}
+html #contact .content .introduce .introduceBtn img,
+body #contact .content .introduce .introduceBtn img {
+  width: 40px;
+  height: 40px;
+}
+html #contact .footer,
+body #contact .footer {
+  width: 100%;
+  height: 5%;
+}
+html #contact .footer span,
+body #contact .footer span {
+  font-size: 5px;
+  color: gray;
+  line-height: 2;
+  letter-spacing: 0;
+}
+html .next,
+body .next {
+  bottom: 10px;
+  left: 45%;
+  width: 25px;
+  height: 15px;
+}
+html .next img,
+body .next img {
+  width: 22px !important;
+  height: 11px !important;
+}
