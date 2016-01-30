@@ -5,15 +5,15 @@
  */
 function sliderGo(index) {
 	var el = parseInt(index) >= 0 ? $('.sider').find('img:eq(' + index + ')') : index;
-	if (el.data('go') == '#home') {
+	if (el.data('go') === '#home') {
 		el.attr('src', './img/global/home.png').siblings('img').attr('src', './img/global/page_inactive.png');
 	} else {
 		el.attr('src', './img/global/page_active.png').siblings('img:gt(0)').attr('src', './img/global/page_inactive.png').siblings('img:first').attr('src', './img/global/home_inactive.png');
 	}
-	if (el.data('go') == '#info') {
-		$('.next').find('img').attr('src', './img/global/previous.png')
+	if (el.data('go') === '#info') {
+		$('.next').find('img').attr('src', './img/global/previous.png');
 	} else {
-		$('.next').find('img').attr('src', './img/global/next.png')
+		$('.next').find('img').attr('src', './img/global/next.png');
 	}
 }
 /** @type {Boolean} [是否允许arrow移动] */
@@ -26,8 +26,7 @@ $(function () {
 	window.location.hash = "#home";
 	$.fn.coolAnimate = function (animate, callback) {
 		var self = this;
-		animate = "animated " + animate;
-		$(self).addClass(animate).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+		$(self).addClass(animate + " animated ").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
 			$(this).removeClass(animate);
 			if ($.isFunction(callback)) {
 				callback(self);
@@ -54,7 +53,7 @@ $(function () {
 					$('p', $('.upper', currSlide)).css('opacity', 0);
 					$('img', $('.upper', currSlide)).css('opacity', 0);
 					$('.introduce', $('.down', currSlide)).css('opacity', 0);
-				} else if (i == 4) {
+				} else if (i === 4) {
 					$('h2', $('.content', currSlide)).css('opacity', 0);
 					$('.content', currSlide).find('p:first').css('opacity', 0);
 					$('img', $('.content', currSlide)).css('opacity', 0);
@@ -73,7 +72,7 @@ $(function () {
 					}, 300);
 					$('img', $('.upper', currSlide)).removeAttr('style');
 					$('.introduce', $('.down', currSlide)).removeAttr('style').coolAnimate('fadeIn bitSlow');
-				} else if (i == 4) {
+				} else if (i === 4) {
 					$('h2', $('.content', currSlide)).removeAttr('style').coolAnimate('fadeInLeft');
 					setTimeout(function () {
 						$('.content', currSlide).find('p:first').removeAttr('style').coolAnimate('fadeInRight');
@@ -98,7 +97,7 @@ $(function () {
 
 	$('.next').delegate('img', 'click', function (event) {
 		event.preventDefault();
-		if ($.scrollify.current().data('sectionName') == 'info') {
+		if ($.scrollify.current().data('sectionName') === 'info') {
 			$.scrollify.move('#home');
 		} else {
 			$.scrollify.next();
@@ -115,7 +114,7 @@ $(function () {
 	setInterval(function () {
 		if (enableArrowMoving) {
 			var imgSrc = $('.next').find('img').attr('src');
-			if (imgSrc.split('next').length == 2) {
+			if (imgSrc.split('next').length === 2) {
 				$('.next').coolAnimate('slideInDown');
 			} else {
 				$('.next').coolAnimate('slideInUp');
@@ -136,16 +135,16 @@ $(function () {
 		resizePage();
 	}).trigger('resize');
 	noAds();
-
 });
 
 function resizePage() {
+	var contentWidth;
 	if (disabledWindowResize) {
-		return
+		return;
 	} else {
 		setInterval(function () {
 			disabledWindowResize = false;
-		}, 50)
+		}, 50);
 	}
 	if ($('body').width() >= 838) {
 		// reset width/height when change width from mobile width;
@@ -157,13 +156,12 @@ function resizePage() {
 			// $('#header_logo').attr('src','./img/header/header_logo.png');
 		}
 		currentView = "pc";
-		var contentWidth = $('#whoAmI').find('.content').width(),
-			whoAmIIntroduce = $('#whoAmI').find('.introduceSection'),
+		contentWidth = $('#whoAmI').find('.content').width();
+		var whoAmIIntroduce = $('#whoAmI').find('.introduceSection'),
 			whoAmITotalWidth = 0,
 			whatTodoIntroduce = $('#whatTodo').find('.introduceSection'),
 			whatTodoTotalWidth = 0,
 			contactIntroduce = $('#contact').find('.introduceBtn');
-
 		$.each(whoAmIIntroduce, function (index, val) {
 			whoAmITotalWidth += $(val).width();
 		});
@@ -200,8 +198,8 @@ function resizePage() {
 			$('#contact').find('.introduceBtn').removeAttr('style');
 		}
 		currentView = "mobile";
-		var contentWidth = $('#header').find('.content').width(),
-			headerBtnWidth = $('#header').find('.introduceBtn').width();
+		var headerBtnWidth = $('#header').find('.introduceBtn').width();
+		contentWidth = $('#header').find('.content').width();
 
 		var headerMarginWidth = Math.floor((contentWidth - headerBtnWidth * 2) / 4 - 2) + "px";
 		$('#header').find('.introduceBtn').css('margin-left', headerMarginWidth).css('margin-right', headerMarginWidth);
@@ -231,10 +229,10 @@ function resizePage() {
 				secondWhatTodoWidth += $(val).width();
 			}
 		});
-		var firstWhoAmIpadding = Math.floor((contentWidth - firstWhatTodoWidth) / 4 - 2) + "px",
-			secondWhoAmIpadding = Math.floor((contentWidth - secondWhatTodoWidth) / 4 - 2) + "px";
-		$('#whatTodo').find('.introduceSection:lt(2)').css('margin-left', firstWhoAmIpadding).css('margin-right', firstWhoAmIpadding);
-		$('#whatTodo').find('.introduceSection:gt(1)').css('margin-left', secondWhoAmIpadding).css('margin-right', secondWhoAmIpadding);
+		var firstWhatTodopadding = Math.floor((contentWidth - firstWhatTodoWidth) / 4 - 2) + "px",
+			secondWhatTodopadding = Math.floor((contentWidth - secondWhatTodoWidth) / 4 - 2) + "px";
+		$('#whatTodo').find('.introduceSection:lt(2)').css('margin-left', firstWhatTodopadding).css('margin-right', firstWhatTodopadding);
+		$('#whatTodo').find('.introduceSection:gt(1)').css('margin-left', secondWhatTodopadding).css('margin-right', secondWhatTodopadding);
 		// -------------------howTodo--------------------------
 		$('#howTodo_introduce').attr('src', './img/mobile/introduce.png');
 
@@ -248,5 +246,5 @@ function noAds() {
 	$('iframe').remove();
 	setInterval(function () {
 		$('iframe').remove();
-	}, 1000 * 60)
+	}, 1000 * 60);
 }
