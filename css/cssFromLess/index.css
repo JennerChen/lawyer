@@ -13,7 +13,7 @@ body .slider {
 }
 html #header,
 body #header {
-  background-image: url(/img/header/header.jpg);
+  background-image: url(/dist/img/header/header.jpg);
 }
 html #header .content,
 body #header .content {
@@ -74,7 +74,7 @@ body #header .content .introduce .introduceBtn > p {
 }
 html #whoAmI,
 body #whoAmI {
-  background-image: url(/img/whoAmI/bg.jpg);
+  background-image: url(/dist/img/whoAmI/bg.jpg);
 }
 html #whoAmI .content,
 body #whoAmI .content {
@@ -150,7 +150,7 @@ body #whoAmI .content .introduce .introduceSection:last-child {
 }
 html #whatTodo,
 body #whatTodo {
-  background-image: url(/img/whatTodo/bg.jpg);
+  background-image: url(/dist/img/whatTodo/bg.jpg);
   width: 100%;
 }
 html #whatTodo .content,
@@ -225,7 +225,7 @@ body #whatTodo .content .introduce .introduceSection img {
 }
 html #howTodo,
 body #howTodo {
-  background-image: url(/img/howTodo/bg.jpg);
+  background-image: url(/dist/img/howTodo/bg.jpg);
   width: 100%;
 }
 html #howTodo .content,
@@ -269,7 +269,7 @@ body #howTodo .content .introduce > img {
 }
 html #contact,
 body #contact {
-  background-image: url(/img/contact/bg.jpg);
+  background-image: url(/dist/img/contact/bg.jpg);
   width: 100%;
 }
 html #contact .content,

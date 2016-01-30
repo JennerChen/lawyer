@@ -5,7 +5,7 @@ body {
 }
 html #header,
 body #header {
-  background-image: url(/img/mobile/header.jpg);
+  background-image: url(/dist/img/mobile/header.jpg);
 }
 html #header .content,
 body #header .content {
@@ -38,7 +38,7 @@ body #header .content .introduce .introduceBtn {
 }
 html #whoAmI,
 body #whoAmI {
-  background-image: url(/img/mobile/whoAmI2.jpg);
+  background-image: url(/dist/img/mobile/whoAmI.jpg);
 }
 html #whoAmI .content,
 body #whoAmI .content {
@@ -80,7 +80,7 @@ body #whoAmI .content .introduce .introduceSection > h3 {
 }
 html #whatTodo,
 body #whatTodo {
-  background-image: url(/img/mobile/whatTodo2.jpg);
+  background-image: url(/dist/img/mobile/whatTodo.jpg);
 }
 html #whatTodo .content,
 body #whatTodo .content {
@@ -118,7 +118,7 @@ body #whatTodo .content .introduce .introduceSection > p {
 }
 html #howTodo,
 body #howTodo {
-  background-image: url(/img/mobile/howTodo.jpg);
+  background-image: url(/dist/img/mobile/howTodo.jpg);
 }
 html #howTodo .content,
 body #howTodo .content {
@@ -140,7 +140,7 @@ body #howTodo .content .introduce {
 }
 html #contact,
 body #contact {
-  background-image: url(/img/mobile/contact.jpg);
+  background-image: url(/dist/img/mobile/contact.jpg);
 }
 html #contact .content,
 body #contact .content {

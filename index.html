@@ -19,9 +19,10 @@
           name="description">
     <meta content="找个律师,推荐律师,找律所,公司法务,法律援助,法律文书,裁判文书,法律在线,婚姻家庭纠纷,房屋买卖纠纷,继承纠纷,合同纠纷,保险纠纷,知识产权纠纷" name="keywords">
     <!-- for production -->
-    <link rel="stylesheet" type="text/css" href="dist/css/vendor/bootstrap.css">
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="dist/css/app.min.css">
     <link rel="stylesheet" media="screen and (max-width:838px)" href="dist/css/cssFromLess/mobile/index-mobile.css">
+   <!--  <link rel="stylesheet" type="text/css" href="dist/css/vendor/bootstrap.css"> -->
     <!--<link rel="stylesheet" href="css/cssFromLess/index.css">-->
     <!--<link rel="stylesheet" type="text/css" href="css/cssFromLess/customAnimate.css">-->
     <!--<link rel="stylesheet" media="screen and (max-width:838px)" href="css/cssFromLess/mobile/index-mobile.css">-->
@@ -34,11 +35,14 @@
     <!--[if IE 8]>
     <script src="dist/js/ie8addeventListener.js"></script>
     <![endif]-->
-    <script src="./js/vendor/jquery-1.11.3.min.js"></script>
-    <script src='js/vendor/jquery.easing.1.3.js'></script>
-    <script src='js/vendor/jquery.scrollify.min.js'></script>
+    <!-- // <script src="./js/vendor/jquery-1.11.3.min.js"></script> -->
+    <!-- // <script src='js/vendor/jquery.easing.1.3.js'></script> -->
+    <!-- // <script src='js/vendor/jquery.scrollify.min.js'></script> -->
     <!--<script src='js/main.js'></script>-->
     <!-- for production -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+    <script src="http://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src='js/vendor/jquery.scrollify.min.js'></script>
     <script src='dist/js/main.js'></script>
     <script>
         //noinspection JSUnusedAssignment
@@ -55,31 +59,31 @@
 <body>
 <section id="header" class='slider' data-section-name="home">
     <div class='content'>
-        <img class='title' src="./img/header/header_logo.png"/>
+        <img class='title' src="dist/img/header/header_logo.png"/>
         <p class='slogan'>
             创新性互联网大数据法律平台
         </p>
         <div class='introduce'>
             <div class='introduceBtn' data-go='#profile'>
-                <img src="./img/header/btn_man.png" height="50" width="50">
+                <img src="dist/img/header/btn_man.png" height="50" width="50">
                 <p>
                     我们是谁
                 </p>
             </div>
             <div class='introduceBtn' data-go='#area'>
-                <img src="./img/header/btn_do.png" height="50" width="50">
+                <img src="dist/img/header/btn_do.png" height="50" width="50">
                 <p>
                     我们干什么
                 </p>
             </div>
             <div class='introduceBtn' data-go='#business'>
-                <img src="./img/header/btn_how.png" height="50" width="50">
+                <img src="dist/img/header/btn_how.png" height="50" width="50">
                 <p>
                     我们怎么干
                 </p>
             </div>
             <div class='introduceBtn' data-go='#info'>
-                <img src="./img/header/btn_contact.png" height="50" width="50">
+                <img src="dist/img/header/btn_contact.png" height="50" width="50">
                 <p>
                     联系我们
                 </p>
@@ -91,28 +95,28 @@
     <div class='content'>
         <div class='upper'>
             <h2>我们是谁</h2>
-            <img src="img/global/divider.png" height="21" width="162">
+            <img src="dist/img/global/divider.png" height="21" width="162">
             <p>找个律师通过互联网大数据的分析，免费帮您解除找不到律师、如何选择好律师的困惑。 </p>
         </div>
         <div class='down'>
             <div class='introduce'>
                 <div class='introduceSection'>
-                    <img src="./img/whoAmI/calendar.png">
+                    <img src="dist/img/whoAmI/calendar.png">
                     <p>统计时间</p>
                     <h3>18年</h3>
                 </div>
                 <div class='introduceSection'>
-                    <img src="./img/whoAmI/lawyer.png">
+                    <img src="dist/img/whoAmI/lawyer.png">
                     <p>统计律师</p>
                     <h3>23万+</h3>
                 </div>
                 <div class='introduceSection'>
-                    <img src="./img/whoAmI/building.png">
+                    <img src="dist/img/whoAmI/building.png">
                     <p>统计律师事务所</p>
                     <h3>2万+</h3>
                 </div>
                 <div class='introduceSection'>
-                    <img src="./img/whoAmI/pen_notebook.png">
+                    <img src="dist/img/whoAmI/pen_notebook.png">
                     <p>统计并分析案件</p>
                     <h3>1300万+</h3>
                 </div>
@@ -124,13 +128,13 @@
     <div class='content'>
         <div class='upper'>
             <h2>我们干什么</h2>
-            <img src="img/global/divider.png" height="21" width="162">
+            <img src="dist/img/global/divider.png" height="21" width="162">
             <p>找个律师聚焦于热门的民事案件，通过LBS技术和互联网大数据的统计分析，彻底地解决用户的困惑：到底哪个律师更靠谱？ </p>
         </div>
         <div class='down'>
             <div class='introduce'>
                 <div class='introduceSection'>
-                    <img src="./img/whatTodo/man.jpg">
+                    <img src="dist/img/whatTodo/man.jpg">
                     <p>
                         离婚纠纷
                         <br> 赡养纠纷
@@ -140,7 +144,7 @@
                     </p>
                 </div>
                 <div class='introduceSection'>
-                    <img src="./img/whatTodo/borrow.jpg">
+                    <img src="dist/img/whatTodo/borrow.jpg">
                     <p>
                         借款合同纠纷
                         <br> 租赁合同纠纷
@@ -150,7 +154,7 @@
                     </p>
                 </div>
                 <div class='introduceSection'>
-                    <img src="./img/whatTodo/hr.jpg">
+                    <img src="dist/img/whatTodo/hr.jpg">
                     <p>
                         人事争议
                         <br> 劳动合同纠纷
@@ -160,7 +164,7 @@
                     </p>
                 </div>
                 <div class='introduceSection'>
-                    <img src="./img/whatTodo/more.jpg">
+                    <img src="dist/img/whatTodo/more.jpg">
                     <p>
                         保险纠纷
                         <br> 知识产权纠纷
@@ -177,12 +181,12 @@
     <div class='content'>
         <div class='upper'>
             <h2>我们怎么干</h2>
-            <img src="img/global/divider.png" height="21" width="162">
+            <img src="dist/img/global/divider.png" height="21" width="162">
             <p>一群信仰互联网和敬畏法律的践行者，守护着“自由而无用的灵魂”，通过在互联网法律领域内不断创新，给社会大众提供真实、专业、优质的法律服务。</p>
         </div>
         <div class='down'>
             <div class='introduce'>
-                <img src="./img/howTodo/introduce.png" id='howTodo_introduce'>
+                <img src="dist/img/howTodo/introduce.png" id='howTodo_introduce'>
             </div>
         </div>
     </div>
@@ -190,19 +194,19 @@
 <section id="contact" class='slider' data-section-name="info">
     <div class='content'>
         <h2>联系我们</h2>
-        <img src="img/global/divider.png" height="21" width="162">
+        <img src="dist/img/global/divider.png" height="21" width="162">
         <p>我们正处在“互联网+法律”的时代，这是一个只有合作才能做的更好的时代；你可以错过很多，但不能在对的时间、对的地点错过对的合作伙伴。</p>
         <div class='introduce'>
             <div class='introduceBtn'>
-                <img src="./img/contact/position.png" height="80" width="80">
+                <img src="dist/img/contact/position.png" height="80" width="80">
                 <p>上海市长寿路28弄30号518室</p>
             </div>
             <div class='introduceBtn'>
-                <img src="./img/contact/tel.png" height="80" width="80">
+                <img src="dist/img/contact/tel.png" height="80" width="80">
                 <p>123456789101</p>
             </div>
             <div class='introduceBtn'>
-                <img src="./img/contact/email.png" height="80" width="100" id="mailTo">
+                <img src="dist/img/contact/email.png" height="80" width="100" id="mailTo">
                 <p>bd@zhaogelvshi.com</p>
             </div>
         </div>
@@ -212,14 +216,14 @@
     </div>
 </section>
 <div class='sider'>
-    <img src="./img/global/home.png" width="27px" height="21px" data-go='#home'/>
-    <img src="./img/global/page_inactive.png" width="18px" height="14px" data-go='#profile'/>
-    <img src="./img/global/page_inactive.png" width="18px" height="14px" data-go='#area'/>
-    <img src="./img/global/page_inactive.png" width="18px" height="14px" data-go='#business'/>
-    <img src="./img/global/page_inactive.png" width="18px" height="14px" data-go='#info'/>
+    <img src="dist/img/global/home.png" width="27px" height="21px" data-go='#home'/>
+    <img src="dist/img/global/page_inactive.png" width="18px" height="14px" data-go='#profile'/>
+    <img src="dist/img/global/page_inactive.png" width="18px" height="14px" data-go='#area'/>
+    <img src="dist/img/global/page_inactive.png" width="18px" height="14px" data-go='#business'/>
+    <img src="dist/img/global/page_inactive.png" width="18px" height="14px" data-go='#info'/>
 </div>
 <div class='next'>
-    <img src="./img/global/next.png" height="23" width="44">
+    <img src="dist/img/global/next.png" height="23" width="44">
 </div>
 </body>
 

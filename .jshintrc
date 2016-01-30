@@ -1,7 +1,8 @@
 {
   "globals": {
     "$": false,
-    "jQuery": false
+    "jQuery": false,
+    "require":false
   },
   "noempty":true,
   "noarg":true,
