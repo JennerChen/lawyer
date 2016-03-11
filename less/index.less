@@ -15,7 +15,7 @@ body {
 			margin: 0 auto;
 			position: relative;
 			top: 30%;
-			width: 60%;
+			width: 800px;
 			.title {
 				width: 404px;
 				height: 118px;
@@ -23,7 +23,6 @@ body {
 			.slogan {
 				color: white;
 				font-size: 30px;
-				font-weight: 800;
 				margin-top: 30px;
 			}
 			.introduce {
@@ -56,7 +55,6 @@ body {
 						letter-spacing: 2px;
 						color: white;
 						padding-top: 5px;
-						font-weight: 800;
 					}
 				}
 
@@ -69,22 +67,21 @@ body {
 		.content {
 			margin: 0 auto;
 			position: relative;
-			width: 60%;
+			width: 940px;
 			height: 100%;
 			.upper,
 			.down {
 				height: 50%;
 			}
 			h2 {
-				padding-top: 13%;
+				padding-top: 18.5%;
 				color: white;
 				font-weight: 800;
-				margin-bottom: 25px;
+				margin-bottom: 32px;
 			}
 			p {
 				margin-top: 25px;
 				color: white;
-				font-weight: 800;
 				letter-spacing: 2px;
 				font-size: 20px;
 			}
@@ -134,14 +131,14 @@ body {
 		.content {
 			margin: 0 auto;
 			position: relative;
-			width: 60%;
+			width: 940px;
 			height: 100%;
 			.upper,
 			.down {
 				height: 50%;
 			}
 			h2 {
-				padding-top: 13%;
+				padding-top: 18.5%;
 				color: white;
 				font-weight: 800;
 				margin-bottom: 25px;
@@ -151,7 +148,12 @@ body {
 				color: white;
 				letter-spacing: 2px;
 				font-size: 20px;
-				font-weight: 800;
+			}
+			.upper{
+				p{
+					margin-top:16px;
+					line-height: 40px;
+				}
 			}
 			.introduce {
 				height: 100px;
@@ -196,7 +198,7 @@ body {
 		.content {
 			margin: 0 auto;
 			position: relative;
-			width: 60%;
+			width: 940px;
 			height: 100%;
 			.upper,
 			.down {
@@ -206,14 +208,18 @@ body {
 				color: white;
 				font-weight: 800;
 				margin-bottom: 25px;
-				padding-top: 13%;
+				padding-top: 18.5%;
 			}
 			p {
-				margin-top: 25px;
+				margin-top: 18px;
 				color: white;
 				letter-spacing: 2px;
 				font-size: 20px;
-				font-weight: 800;
+			}
+			.upper{
+				p {
+					line-height:40px;
+				}
 			}
 			.introduce {
 				margin-top: 13%;
@@ -222,6 +228,16 @@ body {
 				>img {
 					width: 100%;
 					height: 100px;
+				}
+				.imgDesc{
+					padding-left:5px;
+					text-align: left;
+					font-size: 28px;
+					font-weight: 800;
+					span.connect,
+					span.law{
+						margin-left: 340px;
+					}
 				}
 			}
 		}
@@ -233,25 +249,24 @@ body {
 			margin: 0 auto;
 			position: static;
 			padding-top: 10%;
-			width: 60%;
+			width: 942px;
 			height: 95%;
 			h2 {
 				color: white;
 				font-weight: 800;
 				margin-bottom: 25px;
 			}
-			>p {
-				font-weight: 800;
-			}
+
 			p {
-				margin-top: 25px;
+				line-height:40px;
+				margin-top: 18px;
 				color: white;
 				letter-spacing: 2px;
 				font-size: 20px;
 			}
 			.introduce {
 				margin-top: 100px;
-				height: 150px;
+				height: 200px;
 				display: inline-block;
 				width: 100%;
 				.introduceBtn {
@@ -265,19 +280,21 @@ body {
 					-webkit-transition: background-color 0.5s;
 					-o-transition: background-color 0.5s;
 					img {
-						width: 80px;
-						height: 80px;
+						width: 130px;
+						height: 130px;
 						&:first-child {
 							margin-left: 0 !important;
 						}
 						&:last-child {
 							margin-right: 0 !important;
 						}
-						#mailTo{
-							cursor: pointer;
-						}
+					}
+					#mailTo,
+					#mailToText{
+						cursor: pointer;
 					}
 					>p {
+
 						margin-top: 10px;
 						letter-spacing: 2px;
 						color: white;
@@ -295,9 +312,9 @@ body {
 			background-color: rgba(1, 1, 1, 0.5);
 			span {
 				font-size: 18px;
+				font-family:lato, "Microsoft YaHei", "STXihei", "sans-serif";
 				color: gray;
 				line-height: 2.5;
-				letter-spacing: 3px;
 			}
 		}
 	}
@@ -319,7 +336,8 @@ body {
 	.next {
 		bottom: 50px;
 		position: fixed;
-		left: 48%;
+		left: 50%;
+		margin-left:-17.5px;
 		width: 50px;
 		height: 30px;
 		>img {

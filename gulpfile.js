@@ -36,7 +36,6 @@ gulp.task('concat',['miniCss'], function() {
 		.pipe(concat('app.min.css'))                            //- 合并后的文件名
 		.pipe(cssnano())
 		.pipe(gulp.dest('./dist/css'));                               //- 输出文件本地
-
 });
 
 gulp.task('miniImage', function () {
@@ -64,7 +63,6 @@ gulp.task('watch', function () {
 	gulp.watch('js/**/*.js', ['reload-dev']);
 	gulp.watch('css/**/*.css', ['reload-dev']);
 });
-//reload server
 gulp.task('reload-dev', function () {
 	gulp.src('**/*.html')
 		.pipe(connect.reload());
