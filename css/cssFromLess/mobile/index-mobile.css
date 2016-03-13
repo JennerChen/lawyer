@@ -3,6 +3,10 @@ body {
   max-width: 838px;
   min-width: 280px !important;
 }
+html .divider,
+body .divider {
+  height: 16px;
+}
 html #header,
 body #header {
   background-image: url(/dist/img/mobile/header.jpg);
@@ -50,6 +54,10 @@ html #whoAmI .content .upper,
 body #whoAmI .content .upper {
   height: 40%;
 }
+html #whoAmI .content .upper h2,
+body #whoAmI .content .upper h2 {
+  margin-bottom: 4px;
+}
 html #whoAmI .content .upper p,
 body #whoAmI .content .upper p {
   margin-top: 5px;
@@ -92,10 +100,16 @@ html #whatTodo .content .upper,
 body #whatTodo .content .upper {
   height: 40%;
 }
+html #whatTodo .content .upper h2,
+body #whatTodo .content .upper h2 {
+  padding-top: 8.5%;
+  margin-bottom: 4px;
+}
 html #whatTodo .content .upper > p,
 body #whatTodo .content .upper > p {
   margin-top: 5px;
   font-size: 15px;
+  line-height: normal;
 }
 html #whatTodo .content .down,
 body #whatTodo .content .down {
@@ -129,14 +143,41 @@ body #howTodo .content {
 html #howTodo .content p,
 body #howTodo .content p {
   font-size: 15px;
+  line-height: normal !important;
 }
 html #howTodo .content h2,
 body #howTodo .content h2 {
   padding-top: 10%;
+  margin-bottom: 4px;
 }
 html #howTodo .content .introduce,
 body #howTodo .content .introduce {
-  margin-top: 26%;
+  margin-top: 16%;
+}
+html #howTodo .content .introduce img,
+body #howTodo .content .introduce img {
+  width: 256px;
+  height: auto;
+}
+html #howTodo .content .introduce .imgDesc,
+body #howTodo .content .introduce .imgDesc {
+  width: 256px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  margin-top: -40px;
+}
+html #howTodo .content .introduce .imgDesc span,
+body #howTodo .content .introduce .imgDesc span {
+  font-size: 16px;
+}
+html #howTodo .content .introduce .imgDesc span:nth-child(2),
+body #howTodo .content .introduce .imgDesc span:nth-child(2) {
+  margin-left: 56px;
+}
+html #howTodo .content .introduce .imgDesc span:nth-child(3),
+body #howTodo .content .introduce .imgDesc span:nth-child(3) {
+  margin-left: 62px;
 }
 html #contact,
 body #contact {
@@ -156,26 +197,16 @@ html #contact .content > p,
 body #contact .content > p {
   margin-top: 1px;
   font-size: 15px;
+  line-height: normal;
 }
 html #contact .content .introduce,
 body #contact .content .introduce {
   margin-top: 1px;
-  height: 75px;
 }
-html #contact .content .introduce .introduceBtn,
-body #contact .content .introduce .introduceBtn {
-  margin-top: 5px;
-  padding-top: 5px;
-  width: 100%;
-}
-html #contact .content .introduce .introduceBtn > p,
-body #contact .content .introduce .introduceBtn > p {
-  font-size: 10px;
-}
-html #contact .content .introduce .introduceBtn img,
-body #contact .content .introduce .introduceBtn img {
-  width: 40px;
-  height: 40px;
+html #contact .content .introduce img,
+body #contact .content .introduce img {
+  width: 90%;
+  height: auto;
 }
 html #contact .footer,
 body #contact .footer {
@@ -192,12 +223,13 @@ body #contact .footer span {
 html .next,
 body .next {
   bottom: 10px;
-  left: 45%;
+  left: 50%;
   width: 25px;
   height: 15px;
 }
 html .next img,
 body .next img {
+  margin-left: 4px;
   width: 22px !important;
   height: 11px !important;
 }

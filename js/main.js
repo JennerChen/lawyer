@@ -11,9 +11,10 @@ function sliderGo(index) {
 		el.attr('src', './img/global/page_active.png').siblings('img:gt(0)').attr('src', './img/global/page_inactive.png').siblings('img:first').attr('src', './img/global/home_inactive.png');
 	}
 	if (el.data('go') === '#info') {
-		$('.next').find('img').attr('src', './img/global/previous.png');
+		$('.next').find('img').hide();
+//			.attr('src', './img/global/previous.png');
 	} else {
-		$('.next').find('img').attr('src', './img/global/next.png');
+		$('.next').find('img').show().attr('src', './img/global/next.png');
 	}
 }
 /** @type {Boolean} [是否允许arrow移动] */
@@ -120,7 +121,7 @@ $(function () {
 				$('.next').coolAnimate('slideInUp');
 			}
 		}
-	}, 2000);
+	}, 3000);
 	$('#mailTo').click(function () {
 		window.location.href = "mailto:bd@zhaogelvshi.com";
 	});

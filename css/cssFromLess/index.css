@@ -61,7 +61,7 @@ html #header .content .introduce .introduceBtn:hover,
 body #header .content .introduce .introduceBtn:hover {
   cursor: pointer;
   background-color: #00A0EA !important;
-  /*background-color: #00a0ea;*/
+  background-color: #00a0ea;
   filter: alpha(opacity=100);
 }
 html #header .content .introduce .introduceBtn > p,
@@ -93,6 +93,12 @@ body #whoAmI .content h2 {
   color: white;
   font-weight: 800;
   margin-bottom: 32px;
+}
+@media screen and (max-height: 800px) {
+  html #whoAmI .content h2,
+  body #whoAmI .content h2 {
+    padding-top: 11.5%;
+  }
 }
 html #whoAmI .content p,
 body #whoAmI .content p {
@@ -169,6 +175,12 @@ body #whatTodo .content h2 {
   color: white;
   font-weight: 800;
   margin-bottom: 25px;
+}
+@media screen and (max-height: 800px) {
+  html #whatTodo .content h2,
+  body #whatTodo .content h2 {
+    padding-top: 11.5%;
+  }
 }
 html #whatTodo .content p,
 body #whatTodo .content p {
@@ -249,6 +261,12 @@ body #howTodo .content h2 {
   margin-bottom: 25px;
   padding-top: 18.5%;
 }
+@media screen and (max-height: 800px) {
+  html #howTodo .content h2,
+  body #howTodo .content h2 {
+    padding-top: 11.5%;
+  }
+}
 html #howTodo .content p,
 body #howTodo .content p {
   margin-top: 18px;
@@ -297,6 +315,13 @@ body #contact .content {
   width: 942px;
   height: 95%;
 }
+@media all and (max-height: 800px) {
+  html #contact .content,
+  body #contact .content {
+    height: 93.5%;
+    padding-top: 4%;
+  }
+}
 html #contact .content h2,
 body #contact .content h2 {
   color: white;
@@ -313,18 +338,24 @@ body #contact .content p {
 }
 html #contact .content .introduce,
 body #contact .content .introduce {
-  margin-top: 100px;
-  height: 200px;
-  display: inline-block;
+  margin-top: 50px;
   width: 100%;
+}
+html #contact .content .introduce > p,
+body #contact .content .introduce > p {
+  opacity: 0.6;
+  margin-top: 0;
+}
+@media all and (max-height: 830px) {
+  html #contact .content .introduce,
+  body #contact .content .introduce {
+    margin-top: 15px;
+  }
 }
 html #contact .content .introduce .introduceBtn,
 body #contact .content .introduce .introduceBtn {
   padding-top: 20px;
-  float: left;
   height: 100%;
-  background-color: #60616e;
-  background-color: rgba(96, 97, 110, 0.5);
   transition: background-color 0.5s;
   -moz-transition: background-color 0.5s;
   -webkit-transition: background-color 0.5s;
@@ -332,16 +363,8 @@ body #contact .content .introduce .introduceBtn {
 }
 html #contact .content .introduce .introduceBtn img,
 body #contact .content .introduce .introduceBtn img {
-  width: 130px;
-  height: 130px;
-}
-html #contact .content .introduce .introduceBtn img:first-child,
-body #contact .content .introduce .introduceBtn img:first-child {
-  margin-left: 0 !important;
-}
-html #contact .content .introduce .introduceBtn img:last-child,
-body #contact .content .introduce .introduceBtn img:last-child {
-  margin-right: 0 !important;
+  width: 330px;
+  height: 330px;
 }
 html #contact .content .introduce .introduceBtn #mailTo,
 body #contact .content .introduce .introduceBtn #mailTo,
@@ -364,6 +387,12 @@ body #contact .footer {
   filter: alpha(opacity=50);
   background-color: #010101;
   background-color: rgba(1, 1, 1, 0.5);
+}
+@media all and (max-height: 800px) {
+  html #contact .footer,
+  body #contact .footer {
+    height: 6.5%;
+  }
 }
 html #contact .footer span,
 body #contact .footer span {
@@ -392,7 +421,7 @@ body .sider img:hover {
 }
 html .next,
 body .next {
-  bottom: 50px;
+  bottom: 10px;
   position: fixed;
   left: 50%;
   margin-left: -17.5px;

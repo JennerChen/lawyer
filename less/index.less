@@ -75,6 +75,9 @@ body {
 			}
 			h2 {
 				padding-top: 18.5%;
+				@media screen and (max-height: 800px) {
+					padding-top: 11.5%;
+				}
 				color: white;
 				font-weight: 800;
 				margin-bottom: 32px;
@@ -139,6 +142,9 @@ body {
 			}
 			h2 {
 				padding-top: 18.5%;
+				@media screen and (max-height: 800px) {
+					padding-top: 11.5%;
+				}
 				color: white;
 				font-weight: 800;
 				margin-bottom: 25px;
@@ -209,6 +215,9 @@ body {
 				font-weight: 800;
 				margin-bottom: 25px;
 				padding-top: 18.5%;
+				@media screen and (max-height: 800px) {
+					padding-top: 11.5%;
+				}
 			}
 			p {
 				margin-top: 18px;
@@ -251,6 +260,10 @@ body {
 			padding-top: 10%;
 			width: 942px;
 			height: 95%;
+			@media all and (max-height: 800px){
+				height: 93.5%;
+				padding-top: 4%;
+			}
 			h2 {
 				color: white;
 				font-weight: 800;
@@ -265,29 +278,36 @@ body {
 				font-size: 20px;
 			}
 			.introduce {
-				margin-top: 100px;
-				height: 200px;
-				display: inline-block;
+				margin-top: 50px;
+				//height: 200px;
+				//display: inline-block;
 				width: 100%;
+				>p{
+					opacity: 0.6;
+					margin-top:0;
+				}
+				@media all and (max-height: 830px){
+					margin-top: 15px;
+				}
 				.introduceBtn {
 					padding-top: 20px;
-					float: left;
+					//float: left;
 					height: 100%;
-					background-color: rgb(96, 97, 110);
-					background-color: rgba(96, 97, 110, 0.5);
+					//background-color: rgb(96, 97, 110);
+					//background-color: rgba(96, 97, 110, 0.5);
 					transition: background-color 0.5s;
 					-moz-transition: background-color 0.5s;
 					-webkit-transition: background-color 0.5s;
 					-o-transition: background-color 0.5s;
 					img {
-						width: 130px;
-						height: 130px;
-						&:first-child {
-							margin-left: 0 !important;
-						}
-						&:last-child {
-							margin-right: 0 !important;
-						}
+						width: 330px;
+						height: 330px;
+						//&:first-child {
+						//	margin-left: 0 !important;
+						//}
+						//&:last-child {
+						//	margin-right: 0 !important;
+						//}
 					}
 					#mailTo,
 					#mailToText{
@@ -307,6 +327,9 @@ body {
 			text-align: center;
 			width: 100%;
 			height: 5%;
+			@media all and (max-height: 800px){
+				height: 6.5%;
+			}
 			filter: Alpha(opacity=50);
 			background-color: rgb(1, 1, 1);
 			background-color: rgba(1, 1, 1, 0.5);
@@ -334,7 +357,7 @@ body {
 		}
 	}
 	.next {
-		bottom: 50px;
+		bottom: 10px;
 		position: fixed;
 		left: 50%;
 		margin-left:-17.5px;
