@@ -110,7 +110,7 @@ function resizePage() {
 		setInterval(function () {
 			disabledWindowResize = false;
 		}, 50);
-	};
+	}
 	if ($('body').width() >= 838) {
 		// reset width/height when change width from mobile width;
 		if (currentView && currentView === 'mobile') {
