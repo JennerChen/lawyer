@@ -16,14 +16,15 @@ function sliderGo(index) {
 		$('.next').find('img').show().attr('src', './img/global/next.png');
 	}
 }
+
 /** @type {Boolean} [是否允许arrow移动] */
 var enableArrowMoving = true,
 	/** @type {string} [记录当前视窗是pc端还是移动端的, 当前是根据屏幕宽度决定的,以838px以区别] */
 	currentView,
 	disabledWindowResize = false;
+
 $(function () {
 	/** @type {String} 解决当使用动画时出现的bugs */
-//	window.location.hash = "";
 	$.fn.coolAnimate = function (animate, callback) {
 		var self = this;
 		$(self).addClass(animate + " animated ").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
@@ -34,68 +35,18 @@ $(function () {
 		});
 		return $(self);
 	};
-//	$(".slider").css({
-//		"height": $(window).height()
-//	});
-
-//	$.scrollify({
-//		section: ".slider",
-//		easing: "easeOutExpo",
-//		// easing: "easeOutQuad",
-//		scrollSpeed: 800,
-//		scrollbars: false,
-//		before: function (i, selections) {
-//			$('.next').hide();
-//			if ($('body').width() >= 838) {
-//				var currSlide = $(selections[i]);
-//				if (i > 0 && i < 4) {
-//					// $('h2', $('.upper', currSlide)).css('opacity', 0);
-//					// $('p', $('.upper', currSlide)).css('opacity', 0);
-//					// $('img', $('.upper', currSlide)).css('opacity', 0);
-//					$('.introduce', $('.down', currSlide)).css('opacity', 0);
-//				} else if (i === 4) {
-//					// $('h2', $('.content', currSlide)).css('opacity', 0);
-//					// $('.content', currSlide).find('p:first').css('opacity', 0);
-//					// $('img', $('.content', currSlide)).css('opacity', 0);
-//					$('.introduceBtn', $('.content', currSlide)).hide();
-//				}
-//			}
-//		},
-//		after: function (i, selections) {
-//			$('.next').show();
-//			if ($('body').width() >= 838) {
-//				var currSlide = $(selections[i]);
-//				if (i > 0 && i < 4) {
-//					// $('h2', $('.upper', currSlide)).removeAttr('style').coolAnimate('fadeInLeft');
-//					// setTimeout(function () {
-//					// 	$('p', $('.upper', currSlide)).removeAttr('style').coolAnimate('fadeInRight');
-//					// }, 300);
-//					// $('img', $('.upper', currSlide)).removeAttr('style');
-//					$('.introduce', $('.down', currSlide)).removeAttr('style').coolAnimate('fadeIn bitSlow');
-//				} else if (i === 4) {
-//					// $('h2', $('.content', currSlide)).removeAttr('style').coolAnimate('fadeInLeft');
-//					// setTimeout(function () {
-//					// 	$('.content', currSlide).find('p:first').removeAttr('style').coolAnimate('fadeInRight');
-//					// }, 300);
-//					// $('img', $('.content', currSlide)).removeAttr('style');
-//					$('.introduceBtn', $('.content', currSlide)).show().coolAnimate('fadeIn bitSlow');
-//				}
-//			}
-//			sliderGo(i);
-//		}
-//	});
-	var anchors = ['home', 'profile', 'area','business','info'];
+	var anchors = ['home', 'profile', 'area', 'business', 'info'];
 	$('#container').fullpage({
 		anchors: anchors,
 		loopTop: true,
 		loopBottom: true,
-		onLeave: function(i,nextIndex){
-			var selection = $('section[data-anchor='+anchors[nextIndex-1]+']');
+		onLeave: function (i, nextIndex) {
+			var selection = $('section[data-anchor=' + anchors[nextIndex - 1] + ']');
 			$('.introduce', $('.down', selection)).css('opacity', 0);
-			sliderGo(nextIndex-1);
+			sliderGo(nextIndex - 1);
 		},
-		afterLoad: function(link){
-			var selection = $('section[data-anchor='+link+']');
+		afterLoad: function (link) {
+			var selection = $('section[data-anchor=' + link + ']');
 			$('.introduce', $('.down', selection)).removeAttr('style').coolAnimate('fadeIn bitSlow');
 		}
 	});
@@ -103,23 +54,16 @@ $(function () {
 	$('.introduceBtn', $('#header')).click(function () {
 		var target = $(this).data('go');
 		$.fn.fullpage.moveTo(target);
-//		$('.sider').find("[data-go=" + target + "]").trigger('click');
 	});
 	$(".sider").delegate('img', 'click', function (event) {
 		event.preventDefault();
 		$.fn.fullpage.moveTo($(this).data('go'));
-//		$.scrollify.move($(this).data('go'));
 		sliderGo($(this));
 	});
 
 	$('.next').delegate('img', 'click', function (event) {
 		event.preventDefault();
 		$.fn.fullpage.moveSectionDown();
-//		if ($.scrollify.current().data('sectionName') === 'info') {
-//			$.scrollify.move('#home');
-//		} else {
-//			$.scrollify.next();
-//		}
 	});
 	$('.next').delegate('img', 'mouseenter', function (event) {
 		event.preventDefault();
@@ -142,7 +86,7 @@ $(function () {
 	$('#mailTo').click(function () {
 		window.location.href = "mailto:bd@zhaogelvshi.com";
 	});
-	$('#mailToText').click(function(){
+	$('#mailToText').click(function () {
 		window.location.href = "mailto:bd@zhaogelvshi.com";
 	});
 	/**
@@ -166,7 +110,7 @@ function resizePage() {
 		setInterval(function () {
 			disabledWindowResize = false;
 		}, 50);
-	}
+	};
 	if ($('body').width() >= 838) {
 		// reset width/height when change width from mobile width;
 		if (currentView && currentView === 'mobile') {
