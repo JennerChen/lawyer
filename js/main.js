@@ -39,7 +39,7 @@ $(function () {
 	$('#container').fullpage({
 		anchors: anchors,
 		loopTop: true,
-		loopBottom: true,
+		loopBottom: false,
 		onLeave: function (i, nextIndex) {
 			var selection = $('section[data-anchor=' + anchors[nextIndex - 1] + ']');
 			$('.introduce', $('.down', selection)).css('opacity', 0);
